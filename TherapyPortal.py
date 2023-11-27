@@ -8,10 +8,12 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PyQt5.QtCore import *
+
+
+
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-
+from PyQt5.QtCore import *
 import sys
 
 class TherapyPortal(object):
