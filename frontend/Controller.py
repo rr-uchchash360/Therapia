@@ -1,13 +1,11 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from AddPatient import Ui_MainWindow # Replace with your actual file name
-import sys  # Add this line to import the sys module
 
 import sys
 import os
 import json
 import re
 import datetime
-
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
