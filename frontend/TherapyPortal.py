@@ -8,9 +8,15 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
+# import sys
+# sys.path.append('/Users/username/Library/Python/3.8/lib/python/site-packages/QtGui.pyi')
+# sys.path.append('/Users/username/Library/Python/3.8/lib/python/site-packages/QtCore.pyi')
+# sys.path.append('/Users/username/Library/Python/3.8/lib/python/site-packages/QtWidgets.pyi')
+
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+
 
 import sys
 

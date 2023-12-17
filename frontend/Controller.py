@@ -1,7 +1,7 @@
+import sys 
+from PyQt5 import QtWidgets 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from AddPatient import Ui_MainWindow # Replace with your actual file name
-
-import sys
 import os
 import json
 import re
