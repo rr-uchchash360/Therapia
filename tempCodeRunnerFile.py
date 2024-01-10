@@ -1,0 +1,1 @@
+QCoreApplication.translate("Form", "Data 4 :", None)
