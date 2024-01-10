@@ -7,12 +7,11 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-
 import sys
+from PyQt5 import QtGui
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import QFont
 
 class TherapyPortal(object):
     def TherapyPortalUi(self, Form):
