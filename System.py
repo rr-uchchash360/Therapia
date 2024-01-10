@@ -1,3 +1,7 @@
+# ================================ Responsible for connection with HW =======================================
+
+
+
 import threading as th
 import numpy as np
 import serial
