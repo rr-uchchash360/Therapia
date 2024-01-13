@@ -20,7 +20,7 @@ class CreatePatientForm(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Create Patient")
-        self.resize(325, 300)
+        self.resize(300, 250)
         self.initUI()
 
     def initUI(self):
