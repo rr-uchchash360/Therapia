@@ -21,7 +21,7 @@ class CreatePatientForm(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Create Patient")
-        self.resize(300, 250)
+        self.resize(400, 365)
         self.initUI()
 
     def initUI(self):
@@ -49,8 +49,8 @@ class CreatePatientForm(QWidget):
             ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"])
         layout.addRow("Blood Group:", self.blood_group_combobox)
 
-        # self.treatment_plan_text = QTextEdit()
-        # layout.addRow("Treatment Plan:", self.treatment_plan_text)
+        self.treatment_plan_text = QTextEdit()
+        layout.addRow("Treatment Plan:", self.treatment_plan_text)
 
         self.create_patient_button = QPushButton("Create Patient")
         layout.addRow(self.create_patient_button)
@@ -60,16 +60,11 @@ class CreatePatientForm(QWidget):
 
         QMetaObject.connectSlotsByName(self)
 
-        self.patient_name_input.returnPressed.connect(
-            lambda: self.focus_next(self.patient_age_input))
-        self.patient_age_input.returnPressed.connect(
-            lambda: self.focus_next(self.gender_combobox))
-        self.gender_combobox.activated.connect(
-            lambda: self.focus_next(self.contact_number_input))
-        self.contact_number_input.returnPressed.connect(
-            lambda: self.focus_next(self.email_input))
-        self.email_input.returnPressed.connect(
-            lambda: self.focus_next(self.blood_group_combobox))
+        self.patient_name_input.returnPressed.connect(lambda: self.focus_next(self.patient_age_input))
+        self.patient_age_input.returnPressed.connect(lambda: self.focus_next(self.gender_combobox))
+        self.gender_combobox.activated.connect(lambda: self.focus_next(self.contact_number_input))
+        self.contact_number_input.returnPressed.connect(lambda: self.focus_next(self.email_input))
+        self.email_input.returnPressed.connect(lambda: self.focus_next(self.blood_group_combobox))
         # self.blood_group_combobox.activated.connect(lambda: self.focus_next(self.treatment_plan_text))
 
     def focus_next(self, widget):
@@ -105,7 +100,7 @@ class CreatePatientForm(QWidget):
                 "Contact Number": self.contact_number_input.text(),
                 "Email": self.email_input.text(),
                 "Blood Group": self.blood_group_combobox.currentText(),
-                # "Treatment Plan": self.treatment_plan_text.toPlainText(),
+                "Treatment Plan": self.treatment_plan_text.toPlainText(),
             }
 
             default_directory = "patient_data"
