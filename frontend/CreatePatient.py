@@ -16,6 +16,7 @@ from PyQt5.QtWidgets import (
     QFileDialog,
 )
 
+
 class CreatePatientForm(QWidget):
     def __init__(self):
         super().__init__()
@@ -44,7 +45,8 @@ class CreatePatientForm(QWidget):
         layout.addRow("Email:", self.email_input)
 
         self.blood_group_combobox = QComboBox()
-        self.blood_group_combobox.addItems(["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"])
+        self.blood_group_combobox.addItems(
+            ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"])
         layout.addRow("Blood Group:", self.blood_group_combobox)
 
         self.treatment_plan_text = QTextEdit()
@@ -58,12 +60,18 @@ class CreatePatientForm(QWidget):
 
         QMetaObject.connectSlotsByName(self)
 
-        self.patient_name_input.returnPressed.connect(lambda: self.focus_next(self.patient_age_input))
-        self.patient_age_input.returnPressed.connect(lambda: self.focus_next(self.gender_combobox))
-        self.gender_combobox.activated.connect(lambda: self.focus_next(self.contact_number_input))
-        self.contact_number_input.returnPressed.connect(lambda: self.focus_next(self.email_input))
-        self.email_input.returnPressed.connect(lambda: self.focus_next(self.blood_group_combobox))
-        self.blood_group_combobox.activated.connect(lambda: self.focus_next(self.treatment_plan_text))
+        self.patient_name_input.returnPressed.connect(
+            lambda: self.focus_next(self.patient_age_input))
+        self.patient_age_input.returnPressed.connect(
+            lambda: self.focus_next(self.gender_combobox))
+        self.gender_combobox.activated.connect(
+            lambda: self.focus_next(self.contact_number_input))
+        self.contact_number_input.returnPressed.connect(
+            lambda: self.focus_next(self.email_input))
+        self.email_input.returnPressed.connect(
+            lambda: self.focus_next(self.blood_group_combobox))
+        self.blood_group_combobox.activated.connect(
+            lambda: self.focus_next(self.treatment_plan_text))
 
     def focus_next(self, widget):
         widget.setFocus()
@@ -75,7 +83,8 @@ class CreatePatientForm(QWidget):
             month = now.month
             day = now.day
 
-            gender = {"Male": 2, "Female": 1, "Other": 0}.get(self.gender_combobox.currentText(), 0)
+            gender = {"Male": 2, "Female": 1, "Other": 0}.get(
+                self.gender_combobox.currentText(), 0)
             blood_group = {
                 "O+": "01",
                 "O-": "02",
@@ -106,14 +115,17 @@ class CreatePatientForm(QWidget):
             choice_box = QMessageBox()
             choice_box.setIcon(QMessageBox.Question)
             choice_box.setText(choice_msg)
-            choice_box.addButton(QPushButton("Default Location"), QMessageBox.YesRole)
-            choice_box.addButton(QPushButton("Another Location"), QMessageBox.NoRole)
+            choice_box.addButton(QPushButton(
+                "Default Location"), QMessageBox.YesRole)
+            choice_box.addButton(QPushButton(
+                "Another Location"), QMessageBox.NoRole)
             user_choice = choice_box.exec_()
 
             if user_choice == 0:
                 directory = os.path.join(os.getcwd(), default_directory)
             else:
-                directory = QFileDialog.getExistingDirectory(None, "Select Directory", default_directory)
+                directory = QFileDialog.getExistingDirectory(
+                    None, "Select Directory", default_directory)
 
             if directory:
                 folder_path = os.path.join(directory, patient_id)
@@ -121,8 +133,10 @@ class CreatePatientForm(QWidget):
                 if os.path.exists(folder_path):
                     msg_box = QMessageBox()
                     msg_box.setIcon(QMessageBox.Question)
-                    msg_box.setText("A folder with the same Patient ID already exists. Do you want to overwrite it?")
-                    msg_box.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+                    msg_box.setText(
+                        "A folder with the same Patient ID already exists. Do you want to overwrite it?")
+                    msg_box.setStandardButtons(
+                        QMessageBox.Yes | QMessageBox.No)
                     msg_box.setDefaultButton(QMessageBox.No)
                     user_choice = msg_box.exec_()
 
@@ -131,7 +145,8 @@ class CreatePatientForm(QWidget):
 
                 os.makedirs(folder_path, exist_ok=True)
 
-                json_file_path = os.path.join(folder_path, f"{patient_id}.json")
+                json_file_path = os.path.join(
+                    folder_path, f"{patient_id}.json")
                 with open(json_file_path, "w") as json_file:
                     json.dump(patient_data, json_file, indent=4)
 
@@ -141,12 +156,14 @@ class CreatePatientForm(QWidget):
                 msg_box.information(None, "Patient ID", message)
             else:
                 msg_box = QMessageBox()
-                msg_box.setText("No directory selected. Please select a directory to save the patient's data.")
+                msg_box.setText(
+                    "No directory selected. Please select a directory to save the patient's data.")
                 msg_box.setIcon(QMessageBox.Warning)
                 msg_box.exec_()
         else:
             msg_box = QMessageBox()
-            msg_box.setText("Please correct the following errors:\n\n" + self.get_error_messages())
+            msg_box.setText(
+                "Please correct the following errors:\n\n" + self.get_error_messages())
             msg_box.setIcon(QMessageBox.Warning)
             msg_box.exec_()
 
@@ -160,9 +177,11 @@ class CreatePatientForm(QWidget):
         if not self.gender_combobox.currentText():
             self.error_messages.append("Gender is not selected.")
         if not self.contact_number_valid():
-            self.error_messages.append("Invalid Contact Number. It should be an 11-digit number.")
+            self.error_messages.append(
+                "Invalid Contact Number. It should be an 11-digit number.")
         if not self.email_valid():
-            self.error_messages.append("Invalid Email. Please enter a valid email address.")
+            self.error_messages.append(
+                "Invalid Email. Please enter a valid email address.")
         if not self.blood_group_combobox.currentText():
             self.error_messages.append("Blood Group is not selected.")
 
@@ -178,6 +197,7 @@ class CreatePatientForm(QWidget):
 
     def get_error_messages(self):
         return "\n".join(self.error_messages)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

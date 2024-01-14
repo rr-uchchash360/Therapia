@@ -21,12 +21,7 @@ from PyQt5.uic import loadUi
 from PyQt5.QtCore import QThread, pyqtSignal
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
-<<<<<<< Updated upstream
-from Entry_Form_PSAR import Ui_MainWindow_Info
-=======
-
 # from Entry_Form_PSAR import Ui_MainWindow_Info
->>>>>>> Stashed changes
 
 
 class Main(gui.Ui_MainWindow, QtWidgets.QMainWindow):
