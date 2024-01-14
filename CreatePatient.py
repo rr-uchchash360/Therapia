@@ -15,13 +15,16 @@ from PyQt5.QtWidgets import (
     QMessageBox,
     QFileDialog,
 )
+from database import Database
 
 
 class CreatePatientForm(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Create Patient")
-        self.resize(400, 365)
+        self.resize(300, 250)
+        self.db = Database()
+        self.db.connect()
         self.initUI()
 
     def initUI(self):
@@ -49,8 +52,8 @@ class CreatePatientForm(QWidget):
             ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"])
         layout.addRow("Blood Group:", self.blood_group_combobox)
 
-        self.treatment_plan_text = QTextEdit()
-        layout.addRow("Treatment Plan:", self.treatment_plan_text)
+        # self.treatment_plan_text = QTextEdit()
+        # layout.addRow("Treatment Plan:", self.treatment_plan_text)
 
         self.create_patient_button = QPushButton("Create Patient")
         layout.addRow(self.create_patient_button)
@@ -60,11 +63,16 @@ class CreatePatientForm(QWidget):
 
         QMetaObject.connectSlotsByName(self)
 
-        self.patient_name_input.returnPressed.connect(lambda: self.focus_next(self.patient_age_input))
-        self.patient_age_input.returnPressed.connect(lambda: self.focus_next(self.gender_combobox))
-        self.gender_combobox.activated.connect(lambda: self.focus_next(self.contact_number_input))
-        self.contact_number_input.returnPressed.connect(lambda: self.focus_next(self.email_input))
-        self.email_input.returnPressed.connect(lambda: self.focus_next(self.blood_group_combobox))
+        self.patient_name_input.returnPressed.connect(
+            lambda: self.focus_next(self.patient_age_input))
+        self.patient_age_input.returnPressed.connect(
+            lambda: self.focus_next(self.gender_combobox))
+        self.gender_combobox.activated.connect(
+            lambda: self.focus_next(self.contact_number_input))
+        self.contact_number_input.returnPressed.connect(
+            lambda: self.focus_next(self.email_input))
+        self.email_input.returnPressed.connect(
+            lambda: self.focus_next(self.blood_group_combobox))
         # self.blood_group_combobox.activated.connect(lambda: self.focus_next(self.treatment_plan_text))
 
     def focus_next(self, widget):
@@ -100,8 +108,25 @@ class CreatePatientForm(QWidget):
                 "Contact Number": self.contact_number_input.text(),
                 "Email": self.email_input.text(),
                 "Blood Group": self.blood_group_combobox.currentText(),
-                "Treatment Plan": self.treatment_plan_text.toPlainText(),
+                # "Treatment Plan": self.treatment_plan_text.toPlainText(),
             }
+
+            # Insert patient data into the database
+            query = "INSERT INTO patient (P_ID, P_name, Age, Gender, Blood_group, Contact_No, Email) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            data = (
+                patient_id,
+                patient_data["Patient's Name"],
+                patient_data["Age"],
+                patient_data["Gender"],
+                patient_data["Blood Group"],
+                patient_data["Contact Number"],
+                patient_data["Email"],
+            )
+            self.db.execute_query(query, data)
+
+            message = f"Patient has been created successfully. Patient ID: {patient_id}"
+            msg_box = QMessageBox()
+            msg_box.information(None, "Patient ID", message)
 
             default_directory = "patient_data"
 

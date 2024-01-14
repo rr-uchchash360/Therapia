@@ -1,61 +1,49 @@
-from dbm import _Database
 import mysql.connector
-from mysql.connector import Error
 
 
 class Database:
     def __init__(self):
-        self.host = 'localhost'
-        self.user = 'root'
-        self.password = 'ABRARMAHABUBNOWRID24022002'
-        self.database = 'therapia'
         self.connection = None
+        self.cursor = None
+        self.connect()
 
     def connect(self):
         try:
             self.connection = mysql.connector.connect(
-                host=self.host,
-                user=self.user,
-                password=self.password,
-                database=self.database
+                host='localhost',
+                user='root',
+                password='ABRARMAHABUBNOWRID24022002',
+                database='therapia'
             )
-            if self.connection.is_connected():
-                print("Connected to MySQL database")
-        except Error as e:
-            print(f"Error: {e}")
+            self.cursor = self.connection.cursor()
+            print("Connected to the database")
+        except mysql.connector.Error as err:
+            print(f"Error: {err}")
 
     def disconnect(self):
-        if self.connection.is_connected():
+        if self.connection:
             self.connection.close()
-            print("Disconnected from MySQL database")
+            print("Disconnected from the database")
 
     def execute_query(self, query, data=None):
         try:
-            cursor = self.connection.cursor()
-            if data:
-                cursor.execute(query, data)
-            else:
-                cursor.execute(query)
+            if not self.connection.is_connected():
+                self.connect()  # Reconnect if the connection is lost
+
+            if not self.cursor:
+                self.cursor = self.connection.cursor()
+
+            self.cursor.execute(query, data)
             self.connection.commit()
-            return cursor
-        except Error as e:
-            print(f"Error: {e}")
+
+        except mysql.connector.Error as err:
+            print(f"Error: {err}")
+
+    def fetch_data(self, query, data=None):
+        try:
+            self.cursor.execute(query, data)
+            result = self.cursor.fetchall()
+            return result
+        except mysql.connector.Error as err:
+            print(f"Error: {err}")
             return None
-
-    def fetch_all(self, query):
-        cursor = self.execute_query(query)
-        if cursor:
-            return cursor.fetchall()
-        else:
-            return []
-
-    def fetch_one(self, query):
-        cursor = self.execute_query(query)
-        if cursor:
-            return cursor.fetchone()
-        else:
-            return None
-
-
-db = Database()
-db.connect()
