@@ -16,16 +16,17 @@ from PyQt5.QtWidgets import (
     QFileDialog,
 )
 from database import Database
+from PyQt5.QtWidgets import QDialog
 
 
-class CreatePatientForm(QWidget):
+class CreatePatientForm(QDialog):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Create Patient")
         self.resize(300, 250)
+        self.initUI()
         self.db = Database()
         self.db.connect()
-        self.initUI()
 
     def initUI(self):
         layout = QFormLayout()
@@ -112,7 +113,7 @@ class CreatePatientForm(QWidget):
             }
 
             # Insert patient data into the database
-            query = "INSERT INTO patient (P_ID, P_name, Age, Gender, Blood_group, Contact_No, Email) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            query = "INSERT INTO patient (P_ID, P_name, Age, Gender, Blood_Group, Contact_No, Email) VALUES (%s, %s, %s, %s, %s, %s, %s)"
             data = (
                 patient_id,
                 patient_data["Patient's Name"],

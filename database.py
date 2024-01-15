@@ -12,7 +12,7 @@ class Database:
             self.connection = mysql.connector.connect(
                 host='localhost',
                 user='root',
-                password='ABRARMAHABUBNOWRID24022002',
+                password='1234therapia1234',
                 database='therapia'
             )
             self.cursor = self.connection.cursor()

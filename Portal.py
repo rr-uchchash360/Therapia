@@ -4,16 +4,19 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'TherapyPortalYHxUKm.ui'
+# Form generated from reading UI file 'TherapyPortalYHxUKm.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+# Created by: Qt User Interface Compiler version 5.15.2
 ##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
+# WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 import sys
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import QDialog, QComboBox, QPushButton, QVBoxLayout
+
+from CreatePatient import CreatePatientForm
 
 
 class Ui_MainWindow(object):
@@ -121,9 +124,9 @@ class Ui_MainWindow(object):
         palette1.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush11 = QBrush(QColor(0, 85, 0, 128))
         brush11.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette.Active, QPalette.PlaceholderText, brush11)
-#endif
+# endif
         palette1.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette1.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette1.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -132,9 +135,9 @@ class Ui_MainWindow(object):
         palette1.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush12 = QBrush(QColor(0, 85, 0, 128))
         brush12.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush12)
-#endif
+# endif
         palette1.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette1.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette1.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -143,9 +146,9 @@ class Ui_MainWindow(object):
         palette1.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush13 = QBrush(QColor(0, 85, 0, 128))
         brush13.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush13)
-#endif
+# endif
         self.lab_setTime.setPalette(palette1)
         font1 = QFont()
         font1.setFamily(u"Tunga")
@@ -176,7 +179,8 @@ class Ui_MainWindow(object):
         self.value_timer.setFrameShadow(QFrame.Plain)
         self.value_timer.setLineWidth(1)
         self.value_timer.setMidLineWidth(0)
-        self.value_timer.setAlignment(Qt.AlignBottom|Qt.AlignRight|Qt.AlignTrailing)
+        self.value_timer.setAlignment(
+            Qt.AlignBottom | Qt.AlignRight | Qt.AlignTrailing)
         self.button_starttherapy = QPushButton(self.frame_timer)
         self.button_starttherapy.setObjectName(u"button_starttherapy")
         self.button_starttherapy.setGeometry(QRect(30, 230, 140, 30))
@@ -198,8 +202,10 @@ class Ui_MainWindow(object):
         self.button_starttherapy.setFont(font3)
         self.button_starttherapy.setCursor(QCursor(Qt.PointingHandCursor))
         icon = QIcon()
-        icon.addFile(u":/icons/icons/play (2).png", QSize(), QIcon.Normal, QIcon.Off)
-        icon.addFile(u":/icons/icons/stop (2).png", QSize(), QIcon.Normal, QIcon.On)
+        icon.addFile(u":/icons/icons/play (2).png",
+                     QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/icons/stop (2).png",
+                     QSize(), QIcon.Normal, QIcon.On)
         self.button_starttherapy.setIcon(icon)
         self.button_starttherapy.setIconSize(QSize(20, 20))
         self.button_starttherapy.setCheckable(True)
@@ -225,9 +231,9 @@ class Ui_MainWindow(object):
         palette4.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush15 = QBrush(QColor(0, 85, 0, 128))
         brush15.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette4.setBrush(QPalette.Active, QPalette.PlaceholderText, brush15)
-#endif
+# endif
         palette4.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette4.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette4.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -236,9 +242,9 @@ class Ui_MainWindow(object):
         palette4.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush16 = QBrush(QColor(0, 85, 0, 128))
         brush16.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette4.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush16)
-#endif
+# endif
         palette4.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette4.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette4.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -247,9 +253,9 @@ class Ui_MainWindow(object):
         palette4.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush17 = QBrush(QColor(0, 85, 0, 128))
         brush17.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette4.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush17)
-#endif
+# endif
         self.label_selectPatient.setPalette(palette4)
         font4 = QFont()
         font4.setFamily(u"Tunga")
@@ -268,6 +274,7 @@ class Ui_MainWindow(object):
         self.button_existingPatient = QPushButton(self.frame_selectPatient)
         self.button_existingPatient.setObjectName(u"button_existingPatient")
         self.button_existingPatient.setGeometry(QRect(17, 43, 120, 30))
+        self.button_existingPatient.clicked.connect(self.showPatientInfo)
         palette5 = QPalette()
         palette5.setBrush(QPalette.Active, QPalette.WindowText, brush8)
         palette5.setBrush(QPalette.Active, QPalette.ButtonText, brush8)
@@ -280,7 +287,8 @@ class Ui_MainWindow(object):
         self.button_existingPatient.setCursor(QCursor(Qt.PointingHandCursor))
         self.button_existingPatient.setInputMethodHints(Qt.ImhNone)
         icon1 = QIcon()
-        icon1.addFile(u":/icons/icons/search.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/icons/icons/search.png",
+                      QSize(), QIcon.Normal, QIcon.Off)
         self.button_existingPatient.setIcon(icon1)
         self.button_existingPatient.setIconSize(QSize(20, 20))
         self.button_existingPatient.setAutoRepeat(False)
@@ -289,6 +297,7 @@ class Ui_MainWindow(object):
         self.button_newPatient = QPushButton(self.frame_selectPatient)
         self.button_newPatient.setObjectName(u"button_newPatient")
         self.button_newPatient.setGeometry(QRect(17, 83, 120, 30))
+        self.button_newPatient.clicked.connect(self.createPatient)
         palette6 = QPalette()
         palette6.setBrush(QPalette.Active, QPalette.WindowText, brush8)
         palette6.setBrush(QPalette.Active, QPalette.ButtonText, brush8)
@@ -300,7 +309,8 @@ class Ui_MainWindow(object):
         self.button_newPatient.setFont(font3)
         self.button_newPatient.setCursor(QCursor(Qt.PointingHandCursor))
         icon2 = QIcon()
-        icon2.addFile(u":/icons/icons/add-friend.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/icons/icons/add-friend.png",
+                      QSize(), QIcon.Normal, QIcon.Off)
         self.button_newPatient.setIcon(icon2)
         self.button_newPatient.setIconSize(QSize(20, 20))
         self.button_newPatient.setAutoRepeat(False)
@@ -308,7 +318,7 @@ class Ui_MainWindow(object):
         self.button_existingPatient.raise_()
         self.button_newPatient.raise_()
         self.label_selectPatient.raise_()
-        ##3D Graph Frame 
+        # 3D Graph Frame
         self.frame_3dGraph = QFrame(self.frame_baseFrame)
         self.frame_3dGraph.setObjectName(u"frame_3dGraph")
         self.frame_3dGraph.setGeometry(QRect(0, 353, 509, 321))
@@ -334,7 +344,8 @@ class Ui_MainWindow(object):
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_3dVisualization.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.label_3dVisualization.sizePolicy().hasHeightForWidth())
         self.label_3dVisualization.setSizePolicy(sizePolicy)
         palette7 = QPalette()
         palette7.setBrush(QPalette.Active, QPalette.WindowText, brush8)
@@ -344,7 +355,8 @@ class Ui_MainWindow(object):
         self.label_3dVisualization.setFont(font1)
         self.label_3dVisualization.setScaledContents(True)
         self.label_3dVisualization.setAlignment(Qt.AlignCenter)
-        self.label_3dVisualization.setTextInteractionFlags(Qt.NoTextInteraction)
+        self.label_3dVisualization.setTextInteractionFlags(
+            Qt.NoTextInteraction)
         self.label_startCounter = QLabel(self.frame_header)
         self.label_startCounter.setObjectName(u"label_startCounter")
         self.label_startCounter.setGeometry(QRect(372, 37, 85, 25))
@@ -357,9 +369,9 @@ class Ui_MainWindow(object):
         palette8.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush18 = QBrush(QColor(0, 85, 0, 128))
         brush18.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette8.setBrush(QPalette.Active, QPalette.PlaceholderText, brush18)
-#endif
+# endif
         palette8.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette8.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette8.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -368,9 +380,9 @@ class Ui_MainWindow(object):
         palette8.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush19 = QBrush(QColor(0, 85, 0, 128))
         brush19.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette8.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush19)
-#endif
+# endif
         palette8.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette8.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette8.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -379,9 +391,9 @@ class Ui_MainWindow(object):
         palette8.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush20 = QBrush(QColor(0, 85, 0, 128))
         brush20.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette8.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush20)
-#endif
+# endif
         self.label_startCounter.setPalette(palette8)
         font6 = QFont()
         font6.setFamily(u"Tunga")
@@ -410,9 +422,9 @@ class Ui_MainWindow(object):
         palette9.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush21 = QBrush(QColor(0, 85, 0, 128))
         brush21.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette9.setBrush(QPalette.Active, QPalette.PlaceholderText, brush21)
-#endif
+# endif
         palette9.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette9.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette9.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -421,9 +433,9 @@ class Ui_MainWindow(object):
         palette9.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush22 = QBrush(QColor(0, 85, 0, 128))
         brush22.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette9.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush22)
-#endif
+# endif
         palette9.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette9.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette9.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -432,9 +444,9 @@ class Ui_MainWindow(object):
         palette9.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush23 = QBrush(QColor(0, 85, 0, 128))
         brush23.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette9.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush23)
-#endif
+# endif
         self.label_sessionCount.setPalette(palette9)
         font7 = QFont()
         font7.setFamily(u"Tunga")
@@ -453,7 +465,8 @@ class Ui_MainWindow(object):
         self.button_resetSession.setGeometry(QRect(142, 34, 30, 30))
         self.button_resetSession.setFont(font5)
         icon3 = QIcon()
-        icon3.addFile(u":/icons/icons/music-player.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/icons/icons/music-player.png",
+                      QSize(), QIcon.Normal, QIcon.Off)
         self.button_resetSession.setIcon(icon3)
         self.button_resetSession.setIconSize(QSize(25, 25))
         self.button_resetSession.setPopupMode(QToolButton.InstantPopup)
@@ -467,7 +480,8 @@ class Ui_MainWindow(object):
         palette10.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_sessionCount.setPalette(palette10)
         self.value_sessionCount.setFont(font2)
-        self.value_sessionCount.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_sessionCount.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_startCounter = QLabel(self.frame_header)
         self.value_startCounter.setObjectName(u"value_startCounter")
         self.value_startCounter.setGeometry(QRect(438, 37, 55, 25))
@@ -477,7 +491,8 @@ class Ui_MainWindow(object):
         palette11.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_startCounter.setPalette(palette11)
         self.value_startCounter.setFont(font2)
-        self.value_startCounter.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_startCounter.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.frame_serialConnection = QFrame(self.frame_baseFrame)
         self.frame_serialConnection.setObjectName(u"frame_serialConnection")
         self.frame_serialConnection.setGeometry(QRect(154, 0, 147, 120))
@@ -485,8 +500,10 @@ class Ui_MainWindow(object):
         self.frame_serialConnection.setFrameShape(QFrame.Box)
         self.frame_serialConnection.setFrameShadow(QFrame.Raised)
         self.frame_serialConnection.setLineWidth(1)
-        self.button_connectdisconnect_2 = QPushButton(self.frame_serialConnection)
-        self.button_connectdisconnect_2.setObjectName(u"button_connectdisconnect_2")
+        self.button_connectdisconnect_2 = QPushButton(
+            self.frame_serialConnection)
+        self.button_connectdisconnect_2.setObjectName(
+            u"button_connectdisconnect_2")
         self.button_connectdisconnect_2.setGeometry(QRect(13, 83, 120, 30))
         palette12 = QPalette()
         palette12.setBrush(QPalette.Active, QPalette.WindowText, brush8)
@@ -497,9 +514,11 @@ class Ui_MainWindow(object):
         palette12.setBrush(QPalette.Disabled, QPalette.ButtonText, brush14)
         self.button_connectdisconnect_2.setPalette(palette12)
         self.button_connectdisconnect_2.setFont(font3)
-        self.button_connectdisconnect_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.button_connectdisconnect_2.setCursor(
+            QCursor(Qt.PointingHandCursor))
         icon4 = QIcon()
-        icon4.addFile(u":/icons/icons/adapter.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/icons/icons/adapter.png",
+                      QSize(), QIcon.Normal, QIcon.Off)
         self.button_connectdisconnect_2.setIcon(icon4)
         self.button_connectdisconnect_2.setIconSize(QSize(20, 20))
         self.button_connectdisconnect_2.setCheckable(True)
@@ -516,23 +535,25 @@ class Ui_MainWindow(object):
         palette13.setBrush(QPalette.Active, QPalette.Text, brush)
         brush25 = QBrush(QColor(0, 85, 0, 128))
         brush25.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette13.setBrush(QPalette.Active, QPalette.PlaceholderText, brush25)
-#endif
+# endif
         palette13.setBrush(QPalette.Inactive, QPalette.WindowText, brush24)
         palette13.setBrush(QPalette.Inactive, QPalette.Text, brush)
         brush26 = QBrush(QColor(0, 85, 0, 128))
         brush26.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette13.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush26)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette13.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush26)
+# endif
         palette13.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette13.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         brush27 = QBrush(QColor(0, 85, 0, 128))
         brush27.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette13.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush27)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette13.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush27)
+# endif
         self.label_connectionStatus.setPalette(palette13)
         self.label_connectionStatus.setFont(font3)
         self.label_connectionStatus.setCursor(QCursor(Qt.PointingHandCursor))
@@ -550,9 +571,9 @@ class Ui_MainWindow(object):
         palette14.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush28 = QBrush(QColor(0, 85, 0, 128))
         brush28.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette14.setBrush(QPalette.Active, QPalette.PlaceholderText, brush28)
-#endif
+# endif
         palette14.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette14.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette14.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -561,9 +582,10 @@ class Ui_MainWindow(object):
         palette14.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush29 = QBrush(QColor(0, 85, 0, 128))
         brush29.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette14.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush29)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette14.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush29)
+# endif
         palette14.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette14.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette14.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -572,9 +594,10 @@ class Ui_MainWindow(object):
         palette14.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush30 = QBrush(QColor(0, 85, 0, 128))
         brush30.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette14.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush30)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette14.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush30)
+# endif
         self.label_connection_2.setPalette(palette14)
         self.label_connection_2.setFont(font1)
         self.label_connection_2.setCursor(QCursor(Qt.PointingHandCursor))
@@ -601,9 +624,9 @@ class Ui_MainWindow(object):
         palette15.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush31 = QBrush(QColor(0, 85, 0, 128))
         brush31.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette15.setBrush(QPalette.Active, QPalette.PlaceholderText, brush31)
-#endif
+# endif
         palette15.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette15.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette15.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -612,9 +635,10 @@ class Ui_MainWindow(object):
         palette15.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush32 = QBrush(QColor(0, 85, 0, 128))
         brush32.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette15.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush32)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette15.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush32)
+# endif
         palette15.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette15.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette15.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -623,9 +647,10 @@ class Ui_MainWindow(object):
         palette15.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush33 = QBrush(QColor(0, 85, 0, 128))
         brush33.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette15.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush33)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette15.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush33)
+# endif
         self.label_selectTherapy.setPalette(palette15)
         font8 = QFont()
         font8.setFamily(u"Tunga")
@@ -654,31 +679,34 @@ class Ui_MainWindow(object):
         palette16.setBrush(QPalette.Active, QPalette.ButtonText, brush34)
         brush35 = QBrush(QColor(0, 85, 0, 128))
         brush35.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette16.setBrush(QPalette.Active, QPalette.PlaceholderText, brush35)
-#endif
+# endif
         palette16.setBrush(QPalette.Inactive, QPalette.WindowText, brush14)
         palette16.setBrush(QPalette.Inactive, QPalette.Text, brush14)
         palette16.setBrush(QPalette.Inactive, QPalette.ButtonText, brush14)
         brush36 = QBrush(QColor(0, 85, 0, 128))
         brush36.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette16.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush36)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette16.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush36)
+# endif
         palette16.setBrush(QPalette.Disabled, QPalette.WindowText, brush14)
         palette16.setBrush(QPalette.Disabled, QPalette.Text, brush14)
         palette16.setBrush(QPalette.Disabled, QPalette.ButtonText, brush14)
         brush37 = QBrush(QColor(0, 85, 0, 128))
         brush37.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette16.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush37)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette16.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush37)
+# endif
         self.combo_armSelection.setPalette(palette16)
         self.combo_armSelection.setFont(font3)
         self.combo_armSelection.setCursor(QCursor(Qt.PointingHandCursor))
         self.combo_armSelection.setAcceptDrops(False)
         self.combo_armSelection.setMaxVisibleItems(12)
-        self.combo_armSelection.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLength)
+        self.combo_armSelection.setSizeAdjustPolicy(
+            QComboBox.AdjustToMinimumContentsLength)
         self.combo_armSelection.setMinimumContentsLength(0)
         self.combo_armSelection.setIconSize(QSize(20, 20))
         self.combo_armSelection.setFrame(True)
@@ -687,7 +715,8 @@ class Ui_MainWindow(object):
         self.combo_therapyModeSelection.addItem("")
         self.combo_therapyModeSelection.addItem("")
         self.combo_therapyModeSelection.addItem("")
-        self.combo_therapyModeSelection.setObjectName(u"combo_therapyModeSelection")
+        self.combo_therapyModeSelection.setObjectName(
+            u"combo_therapyModeSelection")
         self.combo_therapyModeSelection.setGeometry(QRect(20, 70, 270, 30))
         palette17 = QPalette()
         palette17.setBrush(QPalette.Active, QPalette.WindowText, brush34)
@@ -695,31 +724,35 @@ class Ui_MainWindow(object):
         palette17.setBrush(QPalette.Active, QPalette.ButtonText, brush34)
         brush38 = QBrush(QColor(0, 85, 0, 128))
         brush38.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette17.setBrush(QPalette.Active, QPalette.PlaceholderText, brush38)
-#endif
+# endif
         palette17.setBrush(QPalette.Inactive, QPalette.WindowText, brush14)
         palette17.setBrush(QPalette.Inactive, QPalette.Text, brush14)
         palette17.setBrush(QPalette.Inactive, QPalette.ButtonText, brush14)
         brush39 = QBrush(QColor(0, 85, 0, 128))
         brush39.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette17.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush39)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette17.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush39)
+# endif
         palette17.setBrush(QPalette.Disabled, QPalette.WindowText, brush14)
         palette17.setBrush(QPalette.Disabled, QPalette.Text, brush14)
         palette17.setBrush(QPalette.Disabled, QPalette.ButtonText, brush14)
         brush40 = QBrush(QColor(0, 85, 0, 128))
         brush40.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette17.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush40)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette17.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush40)
+# endif
         self.combo_therapyModeSelection.setPalette(palette17)
         self.combo_therapyModeSelection.setFont(font3)
-        self.combo_therapyModeSelection.setCursor(QCursor(Qt.PointingHandCursor))
+        self.combo_therapyModeSelection.setCursor(
+            QCursor(Qt.PointingHandCursor))
         self.combo_therapyModeSelection.setAcceptDrops(False)
         self.combo_therapyModeSelection.setMaxVisibleItems(12)
-        self.combo_therapyModeSelection.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLength)
+        self.combo_therapyModeSelection.setSizeAdjustPolicy(
+            QComboBox.AdjustToMinimumContentsLength)
         self.combo_therapyModeSelection.setMinimumContentsLength(0)
         self.combo_therapyModeSelection.setIconSize(QSize(20, 20))
         self.combo_therapyModeSelection.setFrame(True)
@@ -736,31 +769,34 @@ class Ui_MainWindow(object):
         palette18.setBrush(QPalette.Active, QPalette.ButtonText, brush34)
         brush41 = QBrush(QColor(0, 85, 0, 128))
         brush41.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette18.setBrush(QPalette.Active, QPalette.PlaceholderText, brush41)
-#endif
+# endif
         palette18.setBrush(QPalette.Inactive, QPalette.WindowText, brush14)
         palette18.setBrush(QPalette.Inactive, QPalette.Text, brush14)
         palette18.setBrush(QPalette.Inactive, QPalette.ButtonText, brush14)
         brush42 = QBrush(QColor(0, 85, 0, 128))
         brush42.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette18.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush42)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette18.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush42)
+# endif
         palette18.setBrush(QPalette.Disabled, QPalette.WindowText, brush14)
         palette18.setBrush(QPalette.Disabled, QPalette.Text, brush14)
         palette18.setBrush(QPalette.Disabled, QPalette.ButtonText, brush14)
         brush43 = QBrush(QColor(0, 85, 0, 128))
         brush43.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette18.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush43)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette18.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush43)
+# endif
         self.combo_therapySelection.setPalette(palette18)
         self.combo_therapySelection.setFont(font3)
         self.combo_therapySelection.setCursor(QCursor(Qt.PointingHandCursor))
         self.combo_therapySelection.setAcceptDrops(False)
         self.combo_therapySelection.setMaxVisibleItems(12)
-        self.combo_therapySelection.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLength)
+        self.combo_therapySelection.setSizeAdjustPolicy(
+            QComboBox.AdjustToMinimumContentsLength)
         self.combo_therapySelection.setMinimumContentsLength(0)
         self.combo_therapySelection.setIconSize(QSize(20, 20))
         self.combo_therapySelection.setFrame(True)
@@ -784,9 +820,9 @@ class Ui_MainWindow(object):
         palette19.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush44 = QBrush(QColor(0, 85, 0, 128))
         brush44.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette19.setBrush(QPalette.Active, QPalette.PlaceholderText, brush44)
-#endif
+# endif
         palette19.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette19.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette19.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -795,9 +831,10 @@ class Ui_MainWindow(object):
         palette19.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush45 = QBrush(QColor(0, 85, 0, 128))
         brush45.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette19.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush45)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette19.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush45)
+# endif
         palette19.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette19.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette19.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -806,9 +843,10 @@ class Ui_MainWindow(object):
         palette19.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush46 = QBrush(QColor(0, 85, 0, 128))
         brush46.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette19.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush46)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette19.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush46)
+# endif
         self.label_therapyDetails.setPalette(palette19)
         self.label_therapyDetails.setFont(font8)
         self.label_therapyDetails.setCursor(QCursor(Qt.PointingHandCursor))
@@ -834,9 +872,9 @@ class Ui_MainWindow(object):
         palette20.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush47 = QBrush(QColor(0, 85, 0, 128))
         brush47.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette20.setBrush(QPalette.Active, QPalette.PlaceholderText, brush47)
-#endif
+# endif
         palette20.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette20.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette20.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -845,9 +883,10 @@ class Ui_MainWindow(object):
         palette20.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush48 = QBrush(QColor(0, 85, 0, 128))
         brush48.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette20.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush48)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette20.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush48)
+# endif
         palette20.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette20.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette20.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -856,16 +895,17 @@ class Ui_MainWindow(object):
         palette20.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush49 = QBrush(QColor(0, 85, 0, 128))
         brush49.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette20.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush49)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette20.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush49)
+# endif
         self.label_maxPrevious.setPalette(palette20)
         self.label_maxPrevious.setFont(font6)
         self.label_maxPrevious.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_maxPrevious.setFrameShape(QFrame.NoFrame)
         self.label_maxPrevious.setFrameShadow(QFrame.Plain)
         self.label_maxPrevious.setScaledContents(True)
-        self.label_maxPrevious.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_maxPrevious.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_maxPrevious.setMargin(0)
         self.label_maxPrevious.setIndent(0)
         self.label_maxNormal = QLabel(self.frame_therapy)
@@ -882,9 +922,9 @@ class Ui_MainWindow(object):
         palette21.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush51 = QBrush(QColor(0, 85, 0, 128))
         brush51.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette21.setBrush(QPalette.Active, QPalette.PlaceholderText, brush51)
-#endif
+# endif
         palette21.setBrush(QPalette.Inactive, QPalette.WindowText, brush50)
         palette21.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette21.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -893,9 +933,10 @@ class Ui_MainWindow(object):
         palette21.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush52 = QBrush(QColor(0, 85, 0, 128))
         brush52.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette21.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush52)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette21.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush52)
+# endif
         palette21.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette21.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette21.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -904,16 +945,17 @@ class Ui_MainWindow(object):
         palette21.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush53 = QBrush(QColor(0, 85, 0, 128))
         brush53.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette21.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush53)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette21.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush53)
+# endif
         self.label_maxNormal.setPalette(palette21)
         self.label_maxNormal.setFont(font6)
         self.label_maxNormal.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_maxNormal.setFrameShape(QFrame.NoFrame)
         self.label_maxNormal.setFrameShadow(QFrame.Plain)
         self.label_maxNormal.setScaledContents(True)
-        self.label_maxNormal.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_maxNormal.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_maxNormal.setMargin(0)
         self.label_maxNormal.setIndent(0)
         self.label_maxCurrent = QLabel(self.frame_therapy)
@@ -928,9 +970,9 @@ class Ui_MainWindow(object):
         palette22.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush54 = QBrush(QColor(0, 85, 0, 128))
         brush54.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette22.setBrush(QPalette.Active, QPalette.PlaceholderText, brush54)
-#endif
+# endif
         palette22.setBrush(QPalette.Inactive, QPalette.WindowText, brush24)
         palette22.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette22.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -939,9 +981,10 @@ class Ui_MainWindow(object):
         palette22.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush55 = QBrush(QColor(0, 85, 0, 128))
         brush55.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette22.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush55)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette22.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush55)
+# endif
         palette22.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette22.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette22.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -950,16 +993,17 @@ class Ui_MainWindow(object):
         palette22.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush56 = QBrush(QColor(0, 85, 0, 128))
         brush56.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette22.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush56)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette22.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush56)
+# endif
         self.label_maxCurrent.setPalette(palette22)
         self.label_maxCurrent.setFont(font6)
         self.label_maxCurrent.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_maxCurrent.setFrameShape(QFrame.NoFrame)
         self.label_maxCurrent.setFrameShadow(QFrame.Plain)
         self.label_maxCurrent.setScaledContents(True)
-        self.label_maxCurrent.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_maxCurrent.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_maxCurrent.setMargin(0)
         self.label_maxCurrent.setIndent(0)
         self.label_minNormal = QLabel(self.frame_therapy)
@@ -974,9 +1018,9 @@ class Ui_MainWindow(object):
         palette23.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush57 = QBrush(QColor(0, 85, 0, 128))
         brush57.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette23.setBrush(QPalette.Active, QPalette.PlaceholderText, brush57)
-#endif
+# endif
         palette23.setBrush(QPalette.Inactive, QPalette.WindowText, brush50)
         palette23.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette23.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -985,9 +1029,10 @@ class Ui_MainWindow(object):
         palette23.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush58 = QBrush(QColor(0, 85, 0, 128))
         brush58.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette23.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush58)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette23.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush58)
+# endif
         palette23.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette23.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette23.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -996,16 +1041,17 @@ class Ui_MainWindow(object):
         palette23.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush59 = QBrush(QColor(0, 85, 0, 128))
         brush59.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette23.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush59)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette23.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush59)
+# endif
         self.label_minNormal.setPalette(palette23)
         self.label_minNormal.setFont(font6)
         self.label_minNormal.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_minNormal.setFrameShape(QFrame.NoFrame)
         self.label_minNormal.setFrameShadow(QFrame.Plain)
         self.label_minNormal.setScaledContents(True)
-        self.label_minNormal.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_minNormal.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_minNormal.setMargin(0)
         self.label_minNormal.setIndent(0)
         self.label_minPrevious = QLabel(self.frame_therapy)
@@ -1020,9 +1066,9 @@ class Ui_MainWindow(object):
         palette24.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush60 = QBrush(QColor(0, 85, 0, 128))
         brush60.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette24.setBrush(QPalette.Active, QPalette.PlaceholderText, brush60)
-#endif
+# endif
         palette24.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette24.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette24.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1031,9 +1077,10 @@ class Ui_MainWindow(object):
         palette24.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush61 = QBrush(QColor(0, 85, 0, 128))
         brush61.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette24.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush61)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette24.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush61)
+# endif
         palette24.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette24.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette24.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1042,16 +1089,17 @@ class Ui_MainWindow(object):
         palette24.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush62 = QBrush(QColor(0, 85, 0, 128))
         brush62.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette24.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush62)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette24.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush62)
+# endif
         self.label_minPrevious.setPalette(palette24)
         self.label_minPrevious.setFont(font6)
         self.label_minPrevious.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_minPrevious.setFrameShape(QFrame.NoFrame)
         self.label_minPrevious.setFrameShadow(QFrame.Plain)
         self.label_minPrevious.setScaledContents(True)
-        self.label_minPrevious.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_minPrevious.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_minPrevious.setMargin(0)
         self.label_minPrevious.setIndent(0)
         self.label_minCurrent = QLabel(self.frame_therapy)
@@ -1066,9 +1114,9 @@ class Ui_MainWindow(object):
         palette25.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush63 = QBrush(QColor(0, 85, 0, 128))
         brush63.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette25.setBrush(QPalette.Active, QPalette.PlaceholderText, brush63)
-#endif
+# endif
         palette25.setBrush(QPalette.Inactive, QPalette.WindowText, brush24)
         palette25.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette25.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1077,9 +1125,10 @@ class Ui_MainWindow(object):
         palette25.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush64 = QBrush(QColor(0, 85, 0, 128))
         brush64.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette25.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush64)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette25.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush64)
+# endif
         palette25.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette25.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette25.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1088,22 +1137,24 @@ class Ui_MainWindow(object):
         palette25.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush65 = QBrush(QColor(0, 85, 0, 128))
         brush65.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette25.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush65)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette25.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush65)
+# endif
         self.label_minCurrent.setPalette(palette25)
         self.label_minCurrent.setFont(font6)
         self.label_minCurrent.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_minCurrent.setFrameShape(QFrame.NoFrame)
         self.label_minCurrent.setFrameShadow(QFrame.Plain)
         self.label_minCurrent.setScaledContents(True)
-        self.label_minCurrent.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_minCurrent.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_minCurrent.setMargin(0)
         self.label_minCurrent.setIndent(0)
         self.label_angularValue = QLabel(self.frame_therapy)
         self.label_angularValue.setObjectName(u"label_angularValue")
         self.label_angularValue.setGeometry(QRect(10, 132, 150, 26))
-        sizePolicy.setHeightForWidth(self.label_angularValue.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.label_angularValue.sizePolicy().hasHeightForWidth())
         self.label_angularValue.setSizePolicy(sizePolicy)
         palette26 = QPalette()
         palette26.setBrush(QPalette.Active, QPalette.WindowText, brush8)
@@ -1114,9 +1165,9 @@ class Ui_MainWindow(object):
         palette26.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush66 = QBrush(QColor(0, 85, 0, 128))
         brush66.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette26.setBrush(QPalette.Active, QPalette.PlaceholderText, brush66)
-#endif
+# endif
         palette26.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette26.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette26.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1125,9 +1176,10 @@ class Ui_MainWindow(object):
         palette26.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush67 = QBrush(QColor(0, 85, 0, 128))
         brush67.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette26.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush67)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette26.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush67)
+# endif
         palette26.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette26.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette26.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1136,9 +1188,10 @@ class Ui_MainWindow(object):
         palette26.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush68 = QBrush(QColor(0, 85, 0, 128))
         brush68.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette26.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush68)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette26.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush68)
+# endif
         self.label_angularValue.setPalette(palette26)
         self.label_angularValue.setFont(font6)
         self.label_angularValue.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1164,9 +1217,9 @@ class Ui_MainWindow(object):
         palette27.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush69 = QBrush(QColor(0, 85, 0, 128))
         brush69.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette27.setBrush(QPalette.Active, QPalette.PlaceholderText, brush69)
-#endif
+# endif
         palette27.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette27.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette27.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1175,9 +1228,10 @@ class Ui_MainWindow(object):
         palette27.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush70 = QBrush(QColor(0, 85, 0, 128))
         brush70.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette27.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush70)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette27.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush70)
+# endif
         palette27.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette27.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette27.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1186,9 +1240,10 @@ class Ui_MainWindow(object):
         palette27.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush71 = QBrush(QColor(0, 85, 0, 128))
         brush71.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette27.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush71)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette27.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush71)
+# endif
         self.label_motion.setPalette(palette27)
         self.label_motion.setFont(font6)
         self.label_motion.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1208,9 +1263,9 @@ class Ui_MainWindow(object):
         palette28.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush72 = QBrush(QColor(0, 85, 0, 128))
         brush72.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette28.setBrush(QPalette.Active, QPalette.PlaceholderText, brush72)
-#endif
+# endif
         palette28.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette28.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette28.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1219,9 +1274,10 @@ class Ui_MainWindow(object):
         palette28.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush73 = QBrush(QColor(0, 85, 0, 128))
         brush73.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette28.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush73)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette28.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush73)
+# endif
         palette28.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette28.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette28.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1230,9 +1286,10 @@ class Ui_MainWindow(object):
         palette28.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush74 = QBrush(QColor(0, 85, 0, 128))
         brush74.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette28.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush74)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette28.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush74)
+# endif
         self.label_motionCount.setPalette(palette28)
         self.label_motionCount.setFont(font6)
         self.label_motionCount.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1249,7 +1306,8 @@ class Ui_MainWindow(object):
         palette29.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_maxNormal.setPalette(palette29)
         self.value_maxNormal.setFont(font2)
-        self.value_maxNormal.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_maxNormal.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_maxPrevious = QLabel(self.frame_therapy)
         self.value_maxPrevious.setObjectName(u"value_maxPrevious")
         self.value_maxPrevious.setGeometry(QRect(254, 223, 74, 30))
@@ -1259,7 +1317,8 @@ class Ui_MainWindow(object):
         palette30.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_maxPrevious.setPalette(palette30)
         self.value_maxPrevious.setFont(font2)
-        self.value_maxPrevious.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_maxPrevious.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_maxCurrent = QLabel(self.frame_therapy)
         self.value_maxCurrent.setObjectName(u"value_maxCurrent")
         self.value_maxCurrent.setGeometry(QRect(254, 246, 74, 30))
@@ -1269,7 +1328,8 @@ class Ui_MainWindow(object):
         palette31.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_maxCurrent.setPalette(palette31)
         self.value_maxCurrent.setFont(font2)
-        self.value_maxCurrent.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_maxCurrent.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_minCurrent = QLabel(self.frame_therapy)
         self.value_minCurrent.setObjectName(u"value_minCurrent")
         self.value_minCurrent.setGeometry(QRect(82, 246, 74, 30))
@@ -1279,7 +1339,8 @@ class Ui_MainWindow(object):
         palette32.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_minCurrent.setPalette(palette32)
         self.value_minCurrent.setFont(font2)
-        self.value_minCurrent.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_minCurrent.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_minPrevious = QLabel(self.frame_therapy)
         self.value_minPrevious.setObjectName(u"value_minPrevious")
         self.value_minPrevious.setGeometry(QRect(82, 223, 74, 30))
@@ -1289,7 +1350,8 @@ class Ui_MainWindow(object):
         palette33.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_minPrevious.setPalette(palette33)
         self.value_minPrevious.setFont(font2)
-        self.value_minPrevious.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_minPrevious.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_minNormal = QLabel(self.frame_therapy)
         self.value_minNormal.setObjectName(u"value_minNormal")
         self.value_minNormal.setGeometry(QRect(82, 200, 74, 30))
@@ -1299,7 +1361,8 @@ class Ui_MainWindow(object):
         palette34.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_minNormal.setPalette(palette34)
         self.value_minNormal.setFont(font2)
-        self.value_minNormal.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_minNormal.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_motion = QLabel(self.frame_therapy)
         self.value_motion.setObjectName(u"value_motion")
         self.value_motion.setGeometry(QRect(210, 159, 110, 30))
@@ -1309,7 +1372,8 @@ class Ui_MainWindow(object):
         palette35.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_motion.setPalette(palette35)
         self.value_motion.setFont(font2)
-        self.value_motion.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_motion.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.value_angularValue = QLabel(self.frame_therapy)
         self.value_angularValue.setObjectName(u"value_angularValue")
         self.value_angularValue.setGeometry(QRect(30, 159, 110, 30))
@@ -1332,9 +1396,9 @@ class Ui_MainWindow(object):
         palette37.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush75 = QBrush(QColor(0, 85, 0, 128))
         brush75.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette37.setBrush(QPalette.Active, QPalette.PlaceholderText, brush75)
-#endif
+# endif
         palette37.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette37.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette37.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1343,9 +1407,10 @@ class Ui_MainWindow(object):
         palette37.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush76 = QBrush(QColor(0, 85, 0, 128))
         brush76.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette37.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush76)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette37.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush76)
+# endif
         palette37.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette37.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette37.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1354,9 +1419,10 @@ class Ui_MainWindow(object):
         palette37.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush77 = QBrush(QColor(0, 85, 0, 128))
         brush77.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette37.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush77)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette37.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush77)
+# endif
         self.label_currenTherapy.setPalette(palette37)
         font9 = QFont()
         font9.setFamily(u"Tunga")
@@ -1387,7 +1453,8 @@ class Ui_MainWindow(object):
         palette38.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         self.value_timeRemaining.setPalette(palette38)
         self.value_timeRemaining.setFont(font2)
-        self.value_timeRemaining.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.value_timeRemaining.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.label_timeLeft = QLabel(self.frame_therapy)
         self.label_timeLeft.setObjectName(u"label_timeLeft")
         self.label_timeLeft.setGeometry(QRect(60, 94, 140, 25))
@@ -1400,9 +1467,9 @@ class Ui_MainWindow(object):
         palette39.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush78 = QBrush(QColor(0, 85, 0, 128))
         brush78.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette39.setBrush(QPalette.Active, QPalette.PlaceholderText, brush78)
-#endif
+# endif
         palette39.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette39.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette39.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1411,9 +1478,10 @@ class Ui_MainWindow(object):
         palette39.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush79 = QBrush(QColor(0, 85, 0, 128))
         brush79.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette39.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush79)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette39.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush79)
+# endif
         palette39.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette39.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette39.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1422,9 +1490,10 @@ class Ui_MainWindow(object):
         palette39.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush80 = QBrush(QColor(0, 85, 0, 128))
         brush80.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette39.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush80)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette39.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush80)
+# endif
         self.label_timeLeft.setPalette(palette39)
         self.label_timeLeft.setFont(font6)
         self.label_timeLeft.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1439,7 +1508,8 @@ class Ui_MainWindow(object):
         self.line_therapy1.setFrameShape(QFrame.HLine)
         self.line_therapy1.setFrameShadow(QFrame.Sunken)
         self.label_currentArmSupervision = QLabel(self.frame_therapy)
-        self.label_currentArmSupervision.setObjectName(u"label_currentArmSupervision")
+        self.label_currentArmSupervision.setObjectName(
+            u"label_currentArmSupervision")
         self.label_currentArmSupervision.setGeometry(QRect(5, 59, 329, 21))
         palette40 = QPalette()
         palette40.setBrush(QPalette.Active, QPalette.WindowText, brush)
@@ -1450,9 +1520,9 @@ class Ui_MainWindow(object):
         palette40.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush81 = QBrush(QColor(0, 85, 0, 128))
         brush81.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette40.setBrush(QPalette.Active, QPalette.PlaceholderText, brush81)
-#endif
+# endif
         palette40.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette40.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette40.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1461,9 +1531,10 @@ class Ui_MainWindow(object):
         palette40.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush82 = QBrush(QColor(0, 85, 0, 128))
         brush82.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette40.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush82)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette40.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush82)
+# endif
         palette40.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette40.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette40.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1472,12 +1543,14 @@ class Ui_MainWindow(object):
         palette40.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush83 = QBrush(QColor(0, 85, 0, 128))
         brush83.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette40.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush83)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette40.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush83)
+# endif
         self.label_currentArmSupervision.setPalette(palette40)
         self.label_currentArmSupervision.setFont(font9)
-        self.label_currentArmSupervision.setCursor(QCursor(Qt.PointingHandCursor))
+        self.label_currentArmSupervision.setCursor(
+            QCursor(Qt.PointingHandCursor))
         self.label_currentArmSupervision.setFrameShape(QFrame.NoFrame)
         self.label_currentArmSupervision.setFrameShadow(QFrame.Plain)
         self.label_currentArmSupervision.setTextFormat(Qt.AutoText)
@@ -1494,7 +1567,8 @@ class Ui_MainWindow(object):
         self.figure_standard = QLabel(self.frame_guidelines)
         self.figure_standard.setObjectName(u"figure_standard")
         self.figure_standard.setGeometry(QRect(3, 33, 332, 243))
-        sizePolicy.setHeightForWidth(self.figure_standard.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.figure_standard.sizePolicy().hasHeightForWidth())
         self.figure_standard.setSizePolicy(sizePolicy)
         self.figure_standard.setFont(font)
         self.figure_standard.setFrameShape(QFrame.NoFrame)
@@ -1502,7 +1576,7 @@ class Ui_MainWindow(object):
         self.figure_standard.setLineWidth(1)
         self.figure_standard.setPixmap(QPixmap(u":/images/images/0.png"))
         self.figure_standard.setScaledContents(True)
-        self.figure_standard.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.figure_standard.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_guidelines = QLabel(self.frame_therapy)
         self.label_guidelines.setObjectName(u"label_guidelines")
         self.label_guidelines.setGeometry(QRect(9, 281, 320, 26))
@@ -1515,9 +1589,9 @@ class Ui_MainWindow(object):
         palette41.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush84 = QBrush(QColor(0, 85, 0, 128))
         brush84.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette41.setBrush(QPalette.Active, QPalette.PlaceholderText, brush84)
-#endif
+# endif
         palette41.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette41.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette41.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1526,9 +1600,10 @@ class Ui_MainWindow(object):
         palette41.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush85 = QBrush(QColor(0, 85, 0, 128))
         brush85.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette41.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush85)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette41.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush85)
+# endif
         palette41.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette41.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette41.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1537,9 +1612,10 @@ class Ui_MainWindow(object):
         palette41.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush86 = QBrush(QColor(0, 85, 0, 128))
         brush86.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette41.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush86)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette41.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush86)
+# endif
         self.label_guidelines.setPalette(palette41)
         self.label_guidelines.setFont(font8)
         self.label_guidelines.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1583,7 +1659,8 @@ class Ui_MainWindow(object):
         self.frame_patientInfo.setFrameShadow(QFrame.Raised)
         self.frame_patientInfo.setLineWidth(1)
         self.label_patientInformation = QLabel(self.frame_patientInfo)
-        self.label_patientInformation.setObjectName(u"label_patientInformation")
+        self.label_patientInformation.setObjectName(
+            u"label_patientInformation")
         self.label_patientInformation.setGeometry(QRect(25, 5, 289, 26))
         palette42 = QPalette()
         palette42.setBrush(QPalette.Active, QPalette.WindowText, brush8)
@@ -1594,9 +1671,9 @@ class Ui_MainWindow(object):
         palette42.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush87 = QBrush(QColor(0, 85, 0, 128))
         brush87.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette42.setBrush(QPalette.Active, QPalette.PlaceholderText, brush87)
-#endif
+# endif
         palette42.setBrush(QPalette.Inactive, QPalette.WindowText, brush8)
         palette42.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette42.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1605,9 +1682,10 @@ class Ui_MainWindow(object):
         palette42.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush88 = QBrush(QColor(0, 85, 0, 128))
         brush88.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette42.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush88)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette42.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush88)
+# endif
         palette42.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette42.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette42.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1616,9 +1694,10 @@ class Ui_MainWindow(object):
         palette42.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush89 = QBrush(QColor(0, 85, 0, 128))
         brush89.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette42.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush89)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette42.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush89)
+# endif
         self.label_patientInformation.setPalette(palette42)
         self.label_patientInformation.setFont(font4)
         self.label_patientInformation.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1638,9 +1717,9 @@ class Ui_MainWindow(object):
         palette43.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush90 = QBrush(QColor(0, 85, 0, 128))
         brush90.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette43.setBrush(QPalette.Active, QPalette.PlaceholderText, brush90)
-#endif
+# endif
         palette43.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette43.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette43.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1649,9 +1728,10 @@ class Ui_MainWindow(object):
         palette43.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush91 = QBrush(QColor(0, 85, 0, 128))
         brush91.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette43.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush91)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette43.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush91)
+# endif
         palette43.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette43.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette43.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1660,16 +1740,17 @@ class Ui_MainWindow(object):
         palette43.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush92 = QBrush(QColor(0, 85, 0, 128))
         brush92.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette43.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush92)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette43.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush92)
+# endif
         self.label_patientId.setPalette(palette43)
         self.label_patientId.setFont(font6)
         self.label_patientId.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_patientId.setFrameShape(QFrame.NoFrame)
         self.label_patientId.setFrameShadow(QFrame.Plain)
         self.label_patientId.setScaledContents(True)
-        self.label_patientId.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_patientId.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_patientIdSep = QLabel(self.frame_patientInfo)
         self.label_patientIdSep.setObjectName(u"label_patientIdSep")
         self.label_patientIdSep.setGeometry(QRect(90, 45, 16, 16))
@@ -1682,9 +1763,9 @@ class Ui_MainWindow(object):
         palette44.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush93 = QBrush(QColor(0, 85, 0, 128))
         brush93.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette44.setBrush(QPalette.Active, QPalette.PlaceholderText, brush93)
-#endif
+# endif
         palette44.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette44.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette44.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1693,9 +1774,10 @@ class Ui_MainWindow(object):
         palette44.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush94 = QBrush(QColor(0, 85, 0, 128))
         brush94.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette44.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush94)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette44.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush94)
+# endif
         palette44.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette44.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette44.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1704,9 +1786,10 @@ class Ui_MainWindow(object):
         palette44.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush95 = QBrush(QColor(0, 85, 0, 128))
         brush95.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette44.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush95)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette44.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush95)
+# endif
         self.label_patientIdSep.setPalette(palette44)
         font10 = QFont()
         font10.setFamily(u"Tunga")
@@ -1733,9 +1816,9 @@ class Ui_MainWindow(object):
         palette45.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush96 = QBrush(QColor(0, 85, 0, 128))
         brush96.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette45.setBrush(QPalette.Active, QPalette.PlaceholderText, brush96)
-#endif
+# endif
         palette45.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette45.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette45.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1744,9 +1827,10 @@ class Ui_MainWindow(object):
         palette45.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush97 = QBrush(QColor(0, 85, 0, 128))
         brush97.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette45.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush97)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette45.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush97)
+# endif
         palette45.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette45.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette45.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1755,16 +1839,18 @@ class Ui_MainWindow(object):
         palette45.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush98 = QBrush(QColor(0, 85, 0, 128))
         brush98.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette45.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush98)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette45.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush98)
+# endif
         self.label_patientGender.setPalette(palette45)
         self.label_patientGender.setFont(font6)
         self.label_patientGender.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_patientGender.setFrameShape(QFrame.NoFrame)
         self.label_patientGender.setFrameShadow(QFrame.Plain)
         self.label_patientGender.setScaledContents(True)
-        self.label_patientGender.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_patientGender.setAlignment(
+            Qt.AlignJustify | Qt.AlignVCenter)
         self.label_genderSep = QLabel(self.frame_patientInfo)
         self.label_genderSep.setObjectName(u"label_genderSep")
         self.label_genderSep.setGeometry(QRect(90, 68, 16, 16))
@@ -1777,9 +1863,9 @@ class Ui_MainWindow(object):
         palette46.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush99 = QBrush(QColor(0, 85, 0, 128))
         brush99.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette46.setBrush(QPalette.Active, QPalette.PlaceholderText, brush99)
-#endif
+# endif
         palette46.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette46.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette46.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1788,9 +1874,10 @@ class Ui_MainWindow(object):
         palette46.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush100 = QBrush(QColor(0, 85, 0, 128))
         brush100.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette46.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush100)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette46.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush100)
+# endif
         palette46.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette46.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette46.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1799,9 +1886,10 @@ class Ui_MainWindow(object):
         palette46.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush101 = QBrush(QColor(0, 85, 0, 128))
         brush101.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette46.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush101)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette46.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush101)
+# endif
         self.label_genderSep.setPalette(palette46)
         self.label_genderSep.setFont(font10)
         self.label_genderSep.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1821,9 +1909,9 @@ class Ui_MainWindow(object):
         palette47.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush102 = QBrush(QColor(0, 85, 0, 128))
         brush102.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette47.setBrush(QPalette.Active, QPalette.PlaceholderText, brush102)
-#endif
+# endif
         palette47.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette47.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette47.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1832,9 +1920,10 @@ class Ui_MainWindow(object):
         palette47.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush103 = QBrush(QColor(0, 85, 0, 128))
         brush103.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette47.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush103)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette47.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush103)
+# endif
         palette47.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette47.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette47.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1843,16 +1932,17 @@ class Ui_MainWindow(object):
         palette47.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush104 = QBrush(QColor(0, 85, 0, 128))
         brush104.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette47.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush104)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette47.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush104)
+# endif
         self.label_patientAge.setPalette(palette47)
         self.label_patientAge.setFont(font6)
         self.label_patientAge.setCursor(QCursor(Qt.PointingHandCursor))
         self.label_patientAge.setFrameShape(QFrame.NoFrame)
         self.label_patientAge.setFrameShadow(QFrame.Plain)
         self.label_patientAge.setScaledContents(True)
-        self.label_patientAge.setAlignment(Qt.AlignJustify|Qt.AlignVCenter)
+        self.label_patientAge.setAlignment(Qt.AlignJustify | Qt.AlignVCenter)
         self.label_ageSep = QLabel(self.frame_patientInfo)
         self.label_ageSep.setObjectName(u"label_ageSep")
         self.label_ageSep.setGeometry(QRect(90, 91, 16, 16))
@@ -1865,9 +1955,9 @@ class Ui_MainWindow(object):
         palette48.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush105 = QBrush(QColor(0, 85, 0, 128))
         brush105.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette48.setBrush(QPalette.Active, QPalette.PlaceholderText, brush105)
-#endif
+# endif
         palette48.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
         palette48.setBrush(QPalette.Inactive, QPalette.Text, brush)
         palette48.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1876,9 +1966,10 @@ class Ui_MainWindow(object):
         palette48.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush106 = QBrush(QColor(0, 85, 0, 128))
         brush106.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette48.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush106)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette48.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush106)
+# endif
         palette48.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette48.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette48.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1887,9 +1978,10 @@ class Ui_MainWindow(object):
         palette48.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush107 = QBrush(QColor(0, 85, 0, 128))
         brush107.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette48.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush107)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette48.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush107)
+# endif
         self.label_ageSep.setPalette(palette48)
         self.label_ageSep.setFont(font10)
         self.label_ageSep.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1911,9 +2003,9 @@ class Ui_MainWindow(object):
         palette49.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush109 = QBrush(QColor(14, 0, 91, 128))
         brush109.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette49.setBrush(QPalette.Active, QPalette.PlaceholderText, brush109)
-#endif
+# endif
         palette49.setBrush(QPalette.Inactive, QPalette.WindowText, brush108)
         palette49.setBrush(QPalette.Inactive, QPalette.Text, brush108)
         palette49.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1922,9 +2014,10 @@ class Ui_MainWindow(object):
         palette49.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush110 = QBrush(QColor(14, 0, 91, 128))
         brush110.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette49.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush110)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette49.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush110)
+# endif
         palette49.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette49.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette49.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1933,9 +2026,10 @@ class Ui_MainWindow(object):
         palette49.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush111 = QBrush(QColor(14, 0, 91, 128))
         brush111.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette49.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush111)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette49.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush111)
+# endif
         self.value_patientAge.setPalette(palette49)
         self.value_patientAge.setFont(font6)
         self.value_patientAge.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1957,9 +2051,9 @@ class Ui_MainWindow(object):
         palette50.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush113 = QBrush(QColor(170, 0, 0, 128))
         brush113.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette50.setBrush(QPalette.Active, QPalette.PlaceholderText, brush113)
-#endif
+# endif
         palette50.setBrush(QPalette.Inactive, QPalette.WindowText, brush112)
         palette50.setBrush(QPalette.Inactive, QPalette.Text, brush112)
         palette50.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -1968,9 +2062,10 @@ class Ui_MainWindow(object):
         palette50.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush114 = QBrush(QColor(170, 0, 0, 128))
         brush114.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette50.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush114)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette50.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush114)
+# endif
         palette50.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette50.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette50.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -1979,9 +2074,10 @@ class Ui_MainWindow(object):
         palette50.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush115 = QBrush(QColor(170, 0, 0, 128))
         brush115.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette50.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush115)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette50.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush115)
+# endif
         self.value_patientId.setPalette(palette50)
         self.value_patientId.setFont(font6)
         self.value_patientId.setCursor(QCursor(Qt.PointingHandCursor))
@@ -2001,9 +2097,9 @@ class Ui_MainWindow(object):
         palette51.setBrush(QPalette.Active, QPalette.Shadow, brush9)
         brush116 = QBrush(QColor(14, 0, 91, 128))
         brush116.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette51.setBrush(QPalette.Active, QPalette.PlaceholderText, brush116)
-#endif
+# endif
         palette51.setBrush(QPalette.Inactive, QPalette.WindowText, brush108)
         palette51.setBrush(QPalette.Inactive, QPalette.Text, brush108)
         palette51.setBrush(QPalette.Inactive, QPalette.ButtonText, brush9)
@@ -2012,9 +2108,10 @@ class Ui_MainWindow(object):
         palette51.setBrush(QPalette.Inactive, QPalette.Shadow, brush9)
         brush117 = QBrush(QColor(14, 0, 91, 128))
         brush117.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette51.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush117)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette51.setBrush(QPalette.Inactive,
+                           QPalette.PlaceholderText, brush117)
+# endif
         palette51.setBrush(QPalette.Disabled, QPalette.WindowText, brush6)
         palette51.setBrush(QPalette.Disabled, QPalette.Text, brush6)
         palette51.setBrush(QPalette.Disabled, QPalette.ButtonText, brush6)
@@ -2023,9 +2120,10 @@ class Ui_MainWindow(object):
         palette51.setBrush(QPalette.Disabled, QPalette.Shadow, brush9)
         brush118 = QBrush(QColor(14, 0, 91, 128))
         brush118.setStyle(Qt.NoBrush)
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette51.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush118)
-#endif
+# if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette51.setBrush(QPalette.Disabled,
+                           QPalette.PlaceholderText, brush118)
+# endif
         self.value_patientGender.setPalette(palette51)
         self.value_patientGender.setFont(font6)
         self.value_patientGender.setCursor(QCursor(Qt.PointingHandCursor))
@@ -2057,145 +2155,270 @@ class Ui_MainWindow(object):
         self.button_newPatient.setDefault(False)
         self.button_connectdisconnect_2.setDefault(False)
 
-
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-#if QT_CONFIG(tooltip)
-        self.dial_setTime.setToolTip(QCoreApplication.translate("MainWindow", u"Rotate the dial to set the duration of therapy.", None))
-#endif // QT_CONFIG(tooltip)
-        self.lab_setTime.setText(QCoreApplication.translate("MainWindow", u"Therapy Timer", None))
-        self.value_timer.setText(QCoreApplication.translate("MainWindow", u"0.0 s", None))
-#if QT_CONFIG(tooltip)
-        self.button_starttherapy.setToolTip(QCoreApplication.translate("MainWindow", u"Start therapy.", None))
-#endif // QT_CONFIG(tooltip)
-        self.button_starttherapy.setText(QCoreApplication.translate("MainWindow", u"Start Therapy", None))
-#if QT_CONFIG(shortcut)
-        self.button_starttherapy.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+T", None))
-#endif // QT_CONFIG(shortcut)
-        self.label_selectPatient.setText(QCoreApplication.translate("MainWindow", u"Select Patient", None))
-#if QT_CONFIG(tooltip)
-        self.button_existingPatient.setToolTip(QCoreApplication.translate("MainWindow", u"Enter ID of an existing patient.", None))
-#endif // QT_CONFIG(tooltip)
-        self.button_existingPatient.setText(QCoreApplication.translate("MainWindow", u"Existing", None))
-#if QT_CONFIG(shortcut)
-        self.button_existingPatient.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+E", None))
-#endif // QT_CONFIG(shortcut)
-#if QT_CONFIG(tooltip)
-        self.button_newPatient.setToolTip(QCoreApplication.translate("MainWindow", u"Add a new patient.", None))
-#endif // QT_CONFIG(tooltip)
-        self.button_newPatient.setText(QCoreApplication.translate("MainWindow", u"New", None))
-#if QT_CONFIG(shortcut)
-        self.button_newPatient.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+N", None))
-#endif // QT_CONFIG(shortcut)
-        self.label_3dVisualization.setText(QCoreApplication.translate("MainWindow", u"3D Visualization", None))
-#if QT_CONFIG(tooltip)
-        self.label_startCounter.setToolTip(QCoreApplication.translate("MainWindow", u"Maximum angular value of a healthy person", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_startCounter.setText(QCoreApplication.translate("MainWindow", u"Starting in - ", None))
-        self.label_sessionCount.setText(QCoreApplication.translate("MainWindow", u"Session - ", None))
-#if QT_CONFIG(tooltip)
-        self.button_resetSession.setToolTip(QCoreApplication.translate("MainWindow", u"Reset Session", None))
-#endif // QT_CONFIG(tooltip)
-        self.button_resetSession.setText(QCoreApplication.translate("MainWindow", u"...", None))
-#if QT_CONFIG(shortcut)
-        self.button_resetSession.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+Shift+R", None))
-#endif // QT_CONFIG(shortcut)
-        self.value_sessionCount.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.value_startCounter.setText(QCoreApplication.translate("MainWindow", u"0 s", None))
-#if QT_CONFIG(tooltip)
-        self.button_connectdisconnect_2.setToolTip(QCoreApplication.translate("MainWindow", u"Connect to the device.", None))
-#endif // QT_CONFIG(tooltip)
-        self.button_connectdisconnect_2.setText(QCoreApplication.translate("MainWindow", u"Connect", None))
-#if QT_CONFIG(shortcut)
-        self.button_connectdisconnect_2.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+C", None))
-#endif // QT_CONFIG(shortcut)
-#if QT_CONFIG(tooltip)
-        self.label_connectionStatus.setToolTip(QCoreApplication.translate("MainWindow", u"Status of connection", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_connectionStatus.setText(QCoreApplication.translate("MainWindow", u"Disconnected", None))
-        self.label_connection_2.setText(QCoreApplication.translate("MainWindow", u"Connection", None))
-        self.label_selectTherapy.setText(QCoreApplication.translate("MainWindow", u"Therapy Checklist", None))
-        self.combo_armSelection.setItemText(0, QCoreApplication.translate("MainWindow", u"--Select Arm--", None))
-        self.combo_armSelection.setItemText(1, QCoreApplication.translate("MainWindow", u"Right Arm", None))
-        self.combo_armSelection.setItemText(2, QCoreApplication.translate("MainWindow", u"Left Arm", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate(
+            "MainWindow", u"MainWindow", None))
+# if QT_CONFIG(tooltip)
+        self.dial_setTime.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Rotate the dial to set the duration of therapy.", None))
+# endif // QT_CONFIG(tooltip)
+        self.lab_setTime.setText(QCoreApplication.translate(
+            "MainWindow", u"Therapy Timer", None))
+        self.value_timer.setText(
+            QCoreApplication.translate("MainWindow", u"0.0 s", None))
+# if QT_CONFIG(tooltip)
+        self.button_starttherapy.setToolTip(
+            QCoreApplication.translate("MainWindow", u"Start therapy.", None))
+# endif // QT_CONFIG(tooltip)
+        self.button_starttherapy.setText(
+            QCoreApplication.translate("MainWindow", u"Start Therapy", None))
+# if QT_CONFIG(shortcut)
+        self.button_starttherapy.setShortcut(
+            QCoreApplication.translate("MainWindow", u"Ctrl+T", None))
+# endif // QT_CONFIG(shortcut)
+        self.label_selectPatient.setText(
+            QCoreApplication.translate("MainWindow", u"Select Patient", None))
+# if QT_CONFIG(tooltip)
+        self.button_existingPatient.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Enter ID of an existing patient.", None))
+# endif // QT_CONFIG(tooltip)
+        self.button_existingPatient.setText(
+            QCoreApplication.translate("MainWindow", u"Existing", None))
+# if QT_CONFIG(shortcut)
+        self.button_existingPatient.setShortcut(
+            QCoreApplication.translate("MainWindow", u"Ctrl+E", None))
+# endif // QT_CONFIG(shortcut)
+# if QT_CONFIG(tooltip)
+        self.button_newPatient.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Add a new patient.", None))
+# endif // QT_CONFIG(tooltip)
+        self.button_newPatient.setText(
+            QCoreApplication.translate("MainWindow", u"New", None))
+# if QT_CONFIG(shortcut)
+        self.button_newPatient.setShortcut(
+            QCoreApplication.translate("MainWindow", u"Ctrl+N", None))
+# endif // QT_CONFIG(shortcut)
+        self.label_3dVisualization.setText(
+            QCoreApplication.translate("MainWindow", u"3D Visualization", None))
+# if QT_CONFIG(tooltip)
+        self.label_startCounter.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Maximum angular value of a healthy person", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_startCounter.setText(QCoreApplication.translate(
+            "MainWindow", u"Starting in - ", None))
+        self.label_sessionCount.setText(
+            QCoreApplication.translate("MainWindow", u"Session - ", None))
+# if QT_CONFIG(tooltip)
+        self.button_resetSession.setToolTip(
+            QCoreApplication.translate("MainWindow", u"Reset Session", None))
+# endif // QT_CONFIG(tooltip)
+        self.button_resetSession.setText(
+            QCoreApplication.translate("MainWindow", u"...", None))
+# if QT_CONFIG(shortcut)
+        self.button_resetSession.setShortcut(
+            QCoreApplication.translate("MainWindow", u"Ctrl+Shift+R", None))
+# endif // QT_CONFIG(shortcut)
+        self.value_sessionCount.setText(
+            QCoreApplication.translate("MainWindow", u"0", None))
+        self.value_startCounter.setText(
+            QCoreApplication.translate("MainWindow", u"0 s", None))
+# if QT_CONFIG(tooltip)
+        self.button_connectdisconnect_2.setToolTip(
+            QCoreApplication.translate("MainWindow", u"Connect to the device.", None))
+# endif // QT_CONFIG(tooltip)
+        self.button_connectdisconnect_2.setText(
+            QCoreApplication.translate("MainWindow", u"Connect", None))
+# if QT_CONFIG(shortcut)
+        self.button_connectdisconnect_2.setShortcut(
+            QCoreApplication.translate("MainWindow", u"Ctrl+C", None))
+# endif // QT_CONFIG(shortcut)
+# if QT_CONFIG(tooltip)
+        self.label_connectionStatus.setToolTip(
+            QCoreApplication.translate("MainWindow", u"Status of connection", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_connectionStatus.setText(
+            QCoreApplication.translate("MainWindow", u"Disconnected", None))
+        self.label_connection_2.setText(
+            QCoreApplication.translate("MainWindow", u"Connection", None))
+        self.label_selectTherapy.setText(QCoreApplication.translate(
+            "MainWindow", u"Therapy Checklist", None))
+        self.combo_armSelection.setItemText(
+            0, QCoreApplication.translate("MainWindow", u"--Select Arm--", None))
+        self.combo_armSelection.setItemText(
+            1, QCoreApplication.translate("MainWindow", u"Right Arm", None))
+        self.combo_armSelection.setItemText(
+            2, QCoreApplication.translate("MainWindow", u"Left Arm", None))
 
-#if QT_CONFIG(tooltip)
-        self.combo_armSelection.setToolTip(QCoreApplication.translate("MainWindow", u"Select the type of therapy.", None))
-#endif // QT_CONFIG(tooltip)
-        self.combo_armSelection.setCurrentText(QCoreApplication.translate("MainWindow", u"--Select Arm--", None))
-        self.combo_therapyModeSelection.setItemText(0, QCoreApplication.translate("MainWindow", u"--Select Therapy Mode--", None))
-        self.combo_therapyModeSelection.setItemText(1, QCoreApplication.translate("MainWindow", u"Right Arm", None))
-        self.combo_therapyModeSelection.setItemText(2, QCoreApplication.translate("MainWindow", u"Left Arm", None))
+# if QT_CONFIG(tooltip)
+        self.combo_armSelection.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Select the type of therapy.", None))
+# endif // QT_CONFIG(tooltip)
+        self.combo_armSelection.setCurrentText(
+            QCoreApplication.translate("MainWindow", u"--Select Arm--", None))
+        self.combo_therapyModeSelection.setItemText(
+            0, QCoreApplication.translate("MainWindow", u"--Select Therapy Mode--", None))
+        self.combo_therapyModeSelection.setItemText(
+            1, QCoreApplication.translate("MainWindow", u"Right Arm", None))
+        self.combo_therapyModeSelection.setItemText(
+            2, QCoreApplication.translate("MainWindow", u"Left Arm", None))
 
-#if QT_CONFIG(tooltip)
-        self.combo_therapyModeSelection.setToolTip(QCoreApplication.translate("MainWindow", u"Select the type of therapy.", None))
-#endif // QT_CONFIG(tooltip)
-        self.combo_therapyModeSelection.setCurrentText(QCoreApplication.translate("MainWindow", u"--Select Therapy Mode--", None))
-        self.combo_therapySelection.setItemText(0, QCoreApplication.translate("MainWindow", u"--Select a Therapy--", None))
-        self.combo_therapySelection.setItemText(1, QCoreApplication.translate("MainWindow", u"Therapy_Name_1", None))
-        self.combo_therapySelection.setItemText(2, QCoreApplication.translate("MainWindow", u"Therapy_Name_2", None))
+# if QT_CONFIG(tooltip)
+        self.combo_therapyModeSelection.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Select the type of therapy.", None))
+# endif // QT_CONFIG(tooltip)
+        self.combo_therapyModeSelection.setCurrentText(
+            QCoreApplication.translate("MainWindow", u"--Select Therapy Mode--", None))
+        self.combo_therapySelection.setItemText(
+            0, QCoreApplication.translate("MainWindow", u"--Select a Therapy--", None))
+        self.combo_therapySelection.setItemText(
+            1, QCoreApplication.translate("MainWindow", u"Therapy_Name_1", None))
+        self.combo_therapySelection.setItemText(
+            2, QCoreApplication.translate("MainWindow", u"Therapy_Name_2", None))
 
-#if QT_CONFIG(tooltip)
-        self.combo_therapySelection.setToolTip(QCoreApplication.translate("MainWindow", u"Select the type of therapy.", None))
-#endif // QT_CONFIG(tooltip)
-        self.combo_therapySelection.setCurrentText(QCoreApplication.translate("MainWindow", u"--Select a Therapy--", None))
-        self.label_therapyDetails.setText(QCoreApplication.translate("MainWindow", u"Therapy Details", None))
-#if QT_CONFIG(tooltip)
-        self.label_maxPrevious.setToolTip(QCoreApplication.translate("MainWindow", u"Maximum angular value of patient", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_maxPrevious.setText(QCoreApplication.translate("MainWindow", u"Max_Previous", None))
-#if QT_CONFIG(tooltip)
-        self.label_maxNormal.setToolTip(QCoreApplication.translate("MainWindow", u"Maximum angular value of a healthy person", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_maxNormal.setText(QCoreApplication.translate("MainWindow", u"Max_Normal", None))
-#if QT_CONFIG(tooltip)
-        self.label_maxCurrent.setToolTip(QCoreApplication.translate("MainWindow", u"Maximum angular value of patient", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_maxCurrent.setText(QCoreApplication.translate("MainWindow", u"Max_Current", None))
-#if QT_CONFIG(tooltip)
-        self.label_minNormal.setToolTip(QCoreApplication.translate("MainWindow", u"Maximum angular value of a healthy person", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_minNormal.setText(QCoreApplication.translate("MainWindow", u"Min_Normal", None))
-#if QT_CONFIG(tooltip)
-        self.label_minPrevious.setToolTip(QCoreApplication.translate("MainWindow", u"Maximum angular value of patient", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_minPrevious.setText(QCoreApplication.translate("MainWindow", u"Min_Previous", None))
-#if QT_CONFIG(tooltip)
-        self.label_minCurrent.setToolTip(QCoreApplication.translate("MainWindow", u"Maximum angular value of patient", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_minCurrent.setText(QCoreApplication.translate("MainWindow", u"Min_Current", None))
-        self.label_angularValue.setText(QCoreApplication.translate("MainWindow", u"Angular Value (\u00b0)", None))
-#if QT_CONFIG(tooltip)
-        self.label_motion.setToolTip(QCoreApplication.translate("MainWindow", u"Shows the name of type of motions", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_motion.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.label_motionCount.setText(QCoreApplication.translate("MainWindow", u"Motion Count", None))
-        self.value_maxNormal.setText(QCoreApplication.translate("MainWindow", u"0.0", None))
-        self.value_maxPrevious.setText(QCoreApplication.translate("MainWindow", u"0.0", None))
-        self.value_maxCurrent.setText(QCoreApplication.translate("MainWindow", u"0.0", None))
-        self.value_minCurrent.setText(QCoreApplication.translate("MainWindow", u"0.0", None))
-        self.value_minPrevious.setText(QCoreApplication.translate("MainWindow", u"0.0", None))
-        self.value_minNormal.setText(QCoreApplication.translate("MainWindow", u"0.0", None))
-        self.value_motion.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.value_angularValue.setText(QCoreApplication.translate("MainWindow", u"0.0", None))
-        self.label_currenTherapy.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.value_timeRemaining.setText(QCoreApplication.translate("MainWindow", u"0.0 s", None))
-        self.label_timeLeft.setText(QCoreApplication.translate("MainWindow", u"Time Left -", None))
-        self.label_currentArmSupervision.setText(QCoreApplication.translate("MainWindow", u"-", None))
+# if QT_CONFIG(tooltip)
+        self.combo_therapySelection.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Select the type of therapy.", None))
+# endif // QT_CONFIG(tooltip)
+        self.combo_therapySelection.setCurrentText(
+            QCoreApplication.translate("MainWindow", u"--Select a Therapy--", None))
+        self.label_therapyDetails.setText(
+            QCoreApplication.translate("MainWindow", u"Therapy Details", None))
+# if QT_CONFIG(tooltip)
+        self.label_maxPrevious.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Maximum angular value of patient", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_maxPrevious.setText(
+            QCoreApplication.translate("MainWindow", u"Max_Previous", None))
+# if QT_CONFIG(tooltip)
+        self.label_maxNormal.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Maximum angular value of a healthy person", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_maxNormal.setText(
+            QCoreApplication.translate("MainWindow", u"Max_Normal", None))
+# if QT_CONFIG(tooltip)
+        self.label_maxCurrent.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Maximum angular value of patient", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_maxCurrent.setText(
+            QCoreApplication.translate("MainWindow", u"Max_Current", None))
+# if QT_CONFIG(tooltip)
+        self.label_minNormal.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Maximum angular value of a healthy person", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_minNormal.setText(
+            QCoreApplication.translate("MainWindow", u"Min_Normal", None))
+# if QT_CONFIG(tooltip)
+        self.label_minPrevious.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Maximum angular value of patient", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_minPrevious.setText(
+            QCoreApplication.translate("MainWindow", u"Min_Previous", None))
+# if QT_CONFIG(tooltip)
+        self.label_minCurrent.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Maximum angular value of patient", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_minCurrent.setText(
+            QCoreApplication.translate("MainWindow", u"Min_Current", None))
+        self.label_angularValue.setText(QCoreApplication.translate(
+            "MainWindow", u"Angular Value (\u00b0)", None))
+# if QT_CONFIG(tooltip)
+        self.label_motion.setToolTip(QCoreApplication.translate(
+            "MainWindow", u"Shows the name of type of motions", None))
+# endif // QT_CONFIG(tooltip)
+        self.label_motion.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_motionCount.setText(
+            QCoreApplication.translate("MainWindow", u"Motion Count", None))
+        self.value_maxNormal.setText(
+            QCoreApplication.translate("MainWindow", u"0.0", None))
+        self.value_maxPrevious.setText(
+            QCoreApplication.translate("MainWindow", u"0.0", None))
+        self.value_maxCurrent.setText(
+            QCoreApplication.translate("MainWindow", u"0.0", None))
+        self.value_minCurrent.setText(
+            QCoreApplication.translate("MainWindow", u"0.0", None))
+        self.value_minPrevious.setText(
+            QCoreApplication.translate("MainWindow", u"0.0", None))
+        self.value_minNormal.setText(
+            QCoreApplication.translate("MainWindow", u"0.0", None))
+        self.value_motion.setText(
+            QCoreApplication.translate("MainWindow", u"0", None))
+        self.value_angularValue.setText(
+            QCoreApplication.translate("MainWindow", u"0.0", None))
+        self.label_currenTherapy.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
+        self.value_timeRemaining.setText(
+            QCoreApplication.translate("MainWindow", u"0.0 s", None))
+        self.label_timeLeft.setText(QCoreApplication.translate(
+            "MainWindow", u"Time Left -", None))
+        self.label_currentArmSupervision.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
         self.figure_standard.setText("")
-        self.label_guidelines.setText(QCoreApplication.translate("MainWindow", u"Guidelines", None))
-        self.label_patientInformation.setText(QCoreApplication.translate("MainWindow", u"Patient Information", None))
-        self.label_patientId.setText(QCoreApplication.translate("MainWindow", u"ID", None))
-        self.label_patientIdSep.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.label_patientGender.setText(QCoreApplication.translate("MainWindow", u"Gender", None))
-        self.label_genderSep.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.label_patientAge.setText(QCoreApplication.translate("MainWindow", u"Age", None))
-        self.label_ageSep.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.value_patientAge.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.value_patientId.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.value_patientGender.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_guidelines.setText(
+            QCoreApplication.translate("MainWindow", u"Guidelines", None))
+        self.label_patientInformation.setText(
+            QCoreApplication.translate("MainWindow", u"Patient Information", None))
+        self.label_patientId.setText(
+            QCoreApplication.translate("MainWindow", u"ID", None))
+        self.label_patientIdSep.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_patientGender.setText(
+            QCoreApplication.translate("MainWindow", u"Gender", None))
+        self.label_genderSep.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_patientAge.setText(
+            QCoreApplication.translate("MainWindow", u"Age", None))
+        self.label_ageSep.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
+        self.value_patientAge.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
+        self.value_patientId.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
+        self.value_patientGender.setText(
+            QCoreApplication.translate("MainWindow", u"-", None))
     # retranslateUi
 
+
+def selectPatient(self):
+    # Open a dialog to select or create a patient
+    dialog = QDialog(self)
+    dialog.setWindowTitle("Select Patient")
+    dialog.setGeometry(100, 100, 400, 200)
+
+    layout = QVBoxLayout(dialog)
+
+    # Create a combo box with existing patient names (fetch from the database)
+    combo_box = QComboBox()
+    existing_patient_names = ["Patient1", "Patient2", "Patient3"]
+    combo_box.addItems(existing_patient_names)
+
+    # Create buttons for selecting an existing patient and creating a new patient
+    select_existing_button = QPushButton("Select Existing Patient")
+    create_new_button = QPushButton("Create New Patient")
+
+    # Connect the buttons to their respective slots
+    select_existing_button.clicked.connect(
+        lambda: self.showPatientInfo(combo_box.currentText()))
+    create_new_button.clicked.connect(self.createPatient)
+
+    # Add widgets to the layout
+    layout.addWidget(combo_box)
+    layout.addWidget(select_existing_button)
+    layout.addWidget(create_new_button)
+
+    # Show the dialog
+    dialog.exec_()
+
+
+def showPatientInfo(self, patient_name):
+    # Fetch and display information for the selected patient (implement this based on your needs)
+    print(f"Displaying information for patient: {patient_name}")
+
+
+def createPatient(self):
+    # Logic to create a new patient (open the CreatePatientForm dialog, for example)
+    create_patient_form = CreatePatientForm()
+    create_patient_form.exec_()
