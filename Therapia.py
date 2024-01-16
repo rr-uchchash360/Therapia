@@ -4,7 +4,7 @@
 # ===================LIBRARY IMPORTS=======================
 
 import os
-
+import csv
 import time
 import sys
 import serial
@@ -21,10 +21,6 @@ from PyQt5.uic import loadUi
 from PyQt5.QtCore import QThread, pyqtSignal
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
-from database import Database
-from CreatePatient import CreatePatientForm
-from Portal import Ui_MainWindow
-from PyQt5.QtWidgets import QDialog
 # from Entry_Form_PSAR import Ui_MainWindow_Info
 
 
@@ -35,20 +31,20 @@ class Main(gui.Ui_MainWindow, QtWidgets.QMainWindow):
     # ==========INITIAL CLASS FUNCTION================
     def __init__(self):
         super(Main, self).__init__()
-        self.ui = Ui_MainWindow()
         self.setupUi(self)
         self.button_connectdisconnect_2.clicked.connect(self.connectDevice)
+        self.button_newPatient.clicked.connect(self.createPatient)
         # self.pushButton_2.clicked.connect(self.connectDevice)
         # Connect the signal to the update_gui method
         self.update_signal.connect(self.update_gui)
-# Initialize entry form and define its objects
+    # Initialize entry form and define its objects
         # initialize the information entry form
-        # self.entry_form = QtWidgets.QMainWindow()
+        self.entry_form = QtWidgets.QMainWindow()
         # create an object of Entry_Form_PSAR (Post Stroke Arm Rehabilitation)
-        # self.form_object = Ui_MainWindow_Info()
-        # self.form_object.setupUi(self.entry_form)  # setup UI
-        # self.entry_form.setWindowTitle(
-        # 'Patient Information Entry Form')  # set window title
+        self.form_object = Ui_MainWindow_Info()
+        self.form_object.setupUi(self.entry_form)  # setup UI
+        self.entry_form.setWindowTitle(
+            'Patient Information Entry Form')  # set window title
     # *Define variables.*
         # define array to store initial co-ordinate values
         self.coordinatesinit = num.zeros((3, 8), dtype='float')
@@ -62,54 +58,19 @@ class Main(gui.Ui_MainWindow, QtWidgets.QMainWindow):
         self.line3d, = self.ax.plot(self.coordinatesinit[0], self.coordinatesinit[1], self.coordinatesinit[2], linewidth=4, marker='o', markersize=6, markeredgecolor='c', markerfacecolor='w',
                                     color=self.color_)  # define line
         self.gobj.move(16, 16)  # move canvas
-        self.db = Database()
-        self.db.connect()
 
-    # =============== Patient Selection ========================= #
+    def showExistingPatient(self):
+        patient_id = self.lineEdit_patientID.text()
 
-    def selectPatient(self):
-        # Open a dialog to select or create a patient
-        dialog = QtWidgets.QDialog(self)
-        dialog.setWindowTitle("Select Patient")
-        dialog.setGeometry(100, 100, 400, 200)
+        if not patient_id:
+            QMessageBox.warning(self, "Warning", "Please enter a Patient ID.")
+            return
 
-        layout = QtWidgets.QVBoxLayout(dialog)
+        patient_data = self.fetchPatientData(patient_id)
 
-        # Create a list of existing patient names (you need to fetch this from the database)
-        # Replace with actual data
-        existing_patient_names = ["Patient1", "Patient2", "Patient3"]
-
-        # Create a combo box with existing patient names
-        combo_box = QtWidgets.QComboBox()
-        combo_box.addItems(existing_patient_names)
-
-        # Create buttons for selecting an existing patient and creating a new patient
-        select_existing_button = QtWidgets.QPushButton(
-            "Select Existing Patient")
-        create_new_button = QtWidgets.QPushButton("Create New Patient")
-
-        # Connect the buttons to their respective slots
-        select_existing_button.clicked.connect(
-            lambda: self.showPatientInfo(combo_box.currentText()))
-        create_new_button.clicked.connect(self.createPatient)
-
-        # Add widgets to the layout
-        layout.addWidget(combo_box)
-        layout.addWidget(select_existing_button)
-        layout.addWidget(create_new_button)
-
-        # Show the dialog
-        dialog.exec_()
-
-    def showPatientInfo(self, patient_name):
-        # Fetch and display information for the selected patient (you need to implement this)
-        print(f"Displaying information for patient: {patient_name}")
-
-    def createPatient(self):
-        # Open the CreatePatientForm dialog to create a new patient
-        create_patient_form = CreatePatientForm()
-        create_patient_form.exec_()
-
+        # Display the existing patient form with fetched data
+        self.existing_patient_form.display_patient_info(patient_data)
+        self.existing_patient_form.show()
     # ==========CONNECT DEVICE EVENT================
 
     def connectDevice(self):

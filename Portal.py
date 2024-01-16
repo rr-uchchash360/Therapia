@@ -2404,5 +2404,5 @@ def createPatient(self):
 
 def showExistingPatient(self):
 
-    existing_patient_form = ExistingPatientForm()
-    existing_patient_form.exec_()
+    self.existing_patient_form = ExistingPatientForm()
+    self.existing_patient_form.exec_()
