@@ -17,6 +17,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import QDialog, QComboBox, QPushButton, QVBoxLayout
 
 from CreatePatient import CreatePatientForm
+from ExistingPatient import ExistingPatientForm
 
 
 class Ui_MainWindow(object):
@@ -274,7 +275,7 @@ class Ui_MainWindow(object):
         self.button_existingPatient = QPushButton(self.frame_selectPatient)
         self.button_existingPatient.setObjectName(u"button_existingPatient")
         self.button_existingPatient.setGeometry(QRect(17, 43, 120, 30))
-        self.button_existingPatient.clicked.connect(self.showPatientInfo)
+        self.button_existingPatient.clicked.connect(self.showExistingPatient)
         palette5 = QPalette()
         palette5.setBrush(QPalette.Active, QPalette.WindowText, brush8)
         palette5.setBrush(QPalette.Active, QPalette.ButtonText, brush8)
@@ -2381,6 +2382,8 @@ class Ui_MainWindow(object):
             QCoreApplication.translate("MainWindow", u"-", None))
     # retranslateUi
 
+# =========MAY DELETE LATER =======
+
 
 def selectPatient(self):
     # Open a dialog to select or create a patient
@@ -2412,6 +2415,8 @@ def selectPatient(self):
     # Show the dialog
     dialog.exec_()
 
+# ========end delete ==========
+
 
 def showPatientInfo(self, patient_name):
     # Fetch and display information for the selected patient (implement this based on your needs)
@@ -2422,3 +2427,9 @@ def createPatient(self):
     # Logic to create a new patient (open the CreatePatientForm dialog, for example)
     create_patient_form = CreatePatientForm()
     create_patient_form.exec_()
+
+
+def showExistingPatient(self):
+    # Open the ExistingPatient form
+    existing_patient_form = ExistingPatientForm()
+    existing_patient_form.exec_()
