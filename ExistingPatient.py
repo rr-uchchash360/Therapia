@@ -1,5 +1,6 @@
 import sys
 import json
+from PyQt5.QtWidgets import QDialog
 from PyQt5.QtWidgets import (
     QFormLayout,
     QLineEdit,
@@ -13,7 +14,7 @@ from PyQt5.QtWidgets import (
 )
 
 
-class ExistingPatientForm(QWidget):
+class ExistingPatientForm(QDialog):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Create Patient")
@@ -28,11 +29,11 @@ class ExistingPatientForm(QWidget):
 
         self.select_patient_button = QPushButton("Show Data")
         layout.addRow(self.select_patient_button)
-       # self.select_patient_button.clicked.connect(self.generate_patient_id)
+        self.select_patient_button.clicked.connect(self.showExistingPatient)
 
         self.setLayout(layout)
 
-    def showPatientInfo(self):
+    def showExistingPatient(self):
         patient_id = self.id_input.text()
 
         if not patient_id:
@@ -44,6 +45,7 @@ class ExistingPatientForm(QWidget):
         self.display_patient_info(patient_data)
 
     def fetch_patient_data(self, patient_id):
+        print("fetch_patient_data called")
 
         try:
             with open(f"{patient_id}.json", "r") as json_file:
@@ -53,6 +55,7 @@ class ExistingPatientForm(QWidget):
             return None
 
     def display_patient_info(self, patient_data):
+        print("display_patient_info called")
         if patient_data:
             QMessageBox.information(
                 self, "Patient Data", f"Patient Name: {patient_data.get('Patient''s Name', 'N/A')}")

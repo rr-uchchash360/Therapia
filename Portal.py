@@ -22,6 +22,7 @@ from ExistingPatient import ExistingPatientForm
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        layout = QFormLayout()
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(853, 733)
@@ -275,6 +276,7 @@ class Ui_MainWindow(object):
         self.button_existingPatient = QPushButton(self.frame_selectPatient)
         self.button_existingPatient.setObjectName(u"button_existingPatient")
         self.button_existingPatient.setGeometry(QRect(17, 43, 120, 30))
+        layout.addRow(self.button_existingPatient)
         self.button_existingPatient.clicked.connect(self.showExistingPatient)
         palette5 = QPalette()
         palette5.setBrush(QPalette.Active, QPalette.WindowText, brush8)
@@ -299,6 +301,7 @@ class Ui_MainWindow(object):
         self.button_newPatient.setObjectName(u"button_newPatient")
         self.button_newPatient.setGeometry(QRect(17, 83, 120, 30))
         self.button_newPatient.clicked.connect(self.createPatient)
+        self.existing_patient_form = None
         palette6 = QPalette()
         palette6.setBrush(QPalette.Active, QPalette.WindowText, brush8)
         palette6.setBrush(QPalette.Active, QPalette.ButtonText, brush8)
@@ -2385,36 +2388,6 @@ class Ui_MainWindow(object):
 # =========MAY DELETE LATER =======
 
 
-def selectPatient(self):
-    # Open a dialog to select or create a patient
-    dialog = QDialog(self)
-    dialog.setWindowTitle("Select Patient")
-    dialog.setGeometry(100, 100, 400, 200)
-
-    layout = QVBoxLayout(dialog)
-
-    # Create a combo box with existing patient names (fetch from the database)
-    combo_box = QComboBox()
-    existing_patient_names = ["Patient1", "Patient2", "Patient3"]
-    combo_box.addItems(existing_patient_names)
-
-    # Create buttons for selecting an existing patient and creating a new patient
-    select_existing_button = QPushButton("Select Existing Patient")
-    create_new_button = QPushButton("Create New Patient")
-
-    # Connect the buttons to their respective slots
-    select_existing_button.clicked.connect(
-        lambda: self.showPatientInfo(combo_box.currentText()))
-    create_new_button.clicked.connect(self.createPatient)
-
-    # Add widgets to the layout
-    layout.addWidget(combo_box)
-    layout.addWidget(select_existing_button)
-    layout.addWidget(create_new_button)
-
-    # Show the dialog
-    dialog.exec_()
-
 # ========end delete ==========
 
 
@@ -2430,6 +2403,6 @@ def createPatient(self):
 
 
 def showExistingPatient(self):
-    # Open the ExistingPatient form
+
     existing_patient_form = ExistingPatientForm()
     existing_patient_form.exec_()
